@@ -1,0 +1,21 @@
+.first-title {
+  &__breadcrumbs {
+    @apply mb-[2.4rem] md:mb-16 xl:mb-[4.4rem];
+  }
+
+  &__description {
+    @apply text-body3;
+
+    font-size: 1.6rem;
+    line-height: 1.45em;
+
+    @screen md {
+      font-size: 1.8rem;
+    }
+
+    @screen xl {
+      font-size: 2rem;
+      line-height: 1.5em;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+</main>
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container flex">
+      <a href="/">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="https://rb-d.ru/images/logo.svg"
+          />
+          <img
+            class="h-[47px] md:h-[64px]"
+            src="https://rb-d.ru/images/logo-mob.svg"
+            alt=""
+          />
+        </picture>
+      </a>
+      <div
+        class="ml-auto flex gap-x-[138px] gap-y-[24px] xl:ml-[106px] xl:flex-1 xl:flex-col"
+      >
+        <nav class="menu hidden md:block">
+          <ul
+            class="flex flex-col items-start gap-y-4 text-body5 xl:flex-row xl:justify-between"
+          >
+            <li class="menu__item">
+              <a href="#">
+                <span class="text">О компании</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <span class="text">Дистрибуция</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <span class="text">СТМ</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <span class="text">Партнерам</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">
+                <span class="text">Парафармация</span>
+                <span class="line"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <ul
+          class="flex max-w-[204px] flex-col gap-y-16 pr-[28px] md:w-[176px] md:gap-y-4 md:pr-0 xl:w-full xl:max-w-full xl:flex-row xl:gap-x-[68px]"
+        >
+          <li>
+            <p class="mb-4 text-listTitle text-greyBlue">Телефон</p>
+            <a href="tel:+" class="block text-body5">+7 (495) 107-05-39</a>
+          </li>
+          <li>
+            <p class="mb-4 text-listTitle text-greyBlue">Адрес</p>
+            <p class="block text-body5">
+              115114, г.Mосква, ул Дербеневская 15Б
+            </p>
+          </li>
+          <li>
+            <p class="mb-4 text-listTitle text-greyBlue">Почта</p>
+            <a href="mail:+" class="block text-body5"
+              >info@rus-distribution.ru</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr
+    class="mb-[1.6em] mt-[1.6em] h-[1px] border-none bg-blue md:mb-12 md:mt-[1.7em] xl:mb-16 xl:mt-16"
+  />
+  <div
+    class="footer__bot container flex-row-reverse justify-between text-center text-body6 text-greyBlue md:flex"
+  >
+    <a href="#" class="mb-[1.6em] block md:mb-0">Политика конфиденциальности</a>
+    <p>ⓒ RBGroup 2023</p>
+  </div>
+</footer>
+
+<div class="modal form-modal" id="fromModal">
+  <div class="modal__container">
+    <a href="#" class="modal__close"><span class="icon-cross"></span></a>
+    <div class="modal__element ">
+      <h5 class="text-body5 mb-[16px] text-center">
+        Для связи с представителем компании оставьте свои контактные данные
+      </h5>
+      <form
+        class="feedback md:col-span-6 md:col-start-2 xl:col-span-5 xl:col-start-7"
+      >
+        <div class="inputs">
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">ФИО*</span>
+            <input
+              class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+              type="text"
+            />
+          </label>
+          <label class="input input--company hovered-line-anim">
+            <span class="input__title">Название компании*</span>
+            <input
+              class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+              type="text"
+            />
+          </label>
+          <label class="input input--phone hovered-line-anim">
+            <span class="input__title">Телефон*</span>
+            <input
+              class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+              type="text"
+            />
+          </label>
+          <label class="input input--email hovered-line-anim">
+            <span class="input__title">Email*</span>
+            <input
+              class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+              type="text"
+            />
+          </label>
+        </div>
+        <label class="flex items-center cursor-pointer attachment-button text-text2 hover:text-red mt-8 ml-auto w-fit">
+          <input type="file" name="attachment" id="" class="invisible w-0 h-0">
+          <span class="icon-link text-[24px] mr-[4px]"></span>
+          <span>Прикрепить презентацию</span>
+        </label>
+      
+        <div class="button__container check__container">
+          <button type="submit" class="button-primary w-full" disabled>
+            <span>Отправить</span>
+          </button>
+          <div class="checkbox-item flex items-center gap-8">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <div class="checkbox__item"></div>
+            </label>
+            <p class="text-body6">
+              Подтверждаю согласие с
+              <a href="#" class="text-red"
+                >политикой обработки персональных данных</a
+              >
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal form-modal  form-modal--success" id="formSuccess">
+  <div class="modal__container">
+    <a href="#" class="modal__close"><span class="icon-cross"></span></a>
+    <svg class="w-[6rem] sm:w-[7.2rem] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-0 " viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="29.144" cy="28.356" r="15.7534" fill="white"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M30 52.5C42.4264 52.5 52.5 42.4264 52.5 30C52.5 17.5736 42.4264 7.5 30 7.5C17.5736 7.5 7.5 17.5736 7.5 30C7.5 42.4264 17.5736 52.5 30 52.5ZM29.3405 39.0338L41.8405 24.0338L38.1595 20.9662L27.339 33.9508L21.6941 28.3059L18.3059 31.6941L25.8059 39.1941L27.661 41.0492L29.3405 39.0338Z" fill="#BC0119"/>
+    </svg>
+    <div class="modal__element ">
+      <p class="text-body4 md:text-body3 xl:text-body1  text-center mb-4 md:mb-[12px]">Спасибо!</p>
+      <p class="text-msub2 xl:text-sub2 text-center mb-[12px] md:mb-8 uppercase" >Ваша заявка отправлена</p>
+      <p class="text-body5 md:text-body4 xl:text-body3 text-center mb-8 md:mb-[24px]">В ближайшее время мы свяжемся <br class="hidden md:block" /> с вами, чтобы обсудить детали</p>
+      <a href="#" onclick="сloseModals('#formSuccess'); return false" class="button-primary w-full">
+        <span>Ок</span>
+      </a>
+    </div>
+  </div>
+</div>

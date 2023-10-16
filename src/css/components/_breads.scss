@@ -1,0 +1,33 @@
+.bread-crumbs {
+  @apply flex items-center gap-[0.2rem];
+}
+
+.bread-crumb {
+  @apply flex items-center gap-[0.2rem] text-body6 text-greyBlue;
+  &:not(:first-child):before {
+    @apply text-greyBlue;
+    content: $icon-arrow2-right;
+    font-size: 20px;
+    font-family: "#{$icomoon-font-family}" !important;
+    speak: never;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  &:last-child {
+    @apply text-text1;
+  }
+
+  &.back {
+    @apply text-text2;
+
+    &:not(:first-child):before {
+      content: $icon-arrow2-left;
+    }
+  }
+}

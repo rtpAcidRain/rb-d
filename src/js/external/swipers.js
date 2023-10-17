@@ -94,4 +94,34 @@ const setSwipers = () => {
       },
     });
   }
+
+  if ($(".link-cards__swiper").length > 0) {
+    const swiper = new Swiper(".link-cards__swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      pagination: {
+        el: ".link-cards__swiper .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".link-cards__swiper .swiper-button-next",
+        prevEl: ".link-cards__swiper .swiper-button-prev",
+      },
+    });
+  }
+  if ($(".team-slider").length > 0) {
+    const swiper = new Swiper(".team-slider", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoHeight: true,
+      pagination: {
+        el: ".team-slider .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".team-slider .swiper-button-next",
+        prevEl: ".team-slider .swiper-button-prev",
+      },
+    });
+  }
 };

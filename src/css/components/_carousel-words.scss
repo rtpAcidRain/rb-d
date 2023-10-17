@@ -1,0 +1,62 @@
+.carousel-words {
+  @apply bg-text2;
+  --gap: 20px;
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  .words {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  .dot,
+  .word {
+    flex: 0 0 auto;
+  }
+
+  .word {
+    @apply text-body7;
+    color: #ffffff;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .marquee {
+    animation: scroll 20s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @screen md {
+    --gap: 30px;
+    padding: 24px 0;
+    .dot {
+      width: 15px;
+      height: 15px;
+    }
+
+    .word {
+      @apply text-body2;
+    }
+  }
+}

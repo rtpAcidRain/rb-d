@@ -31,6 +31,27 @@
   }
 }
 
+.advantages {
+  &-descs {
+    @apply flex flex-col items-center justify-center;
+    row-gap: 12px;
+    padding-top: 24px;
+  }
+  &-desc {
+    --skew: 35deg;
+
+    @apply w-full  border border-blue;
+    max-width: 254px;
+    transform: skew(var(--skew));
+    padding: 10px 0 13px;
+
+    span {
+      @apply block text-center text-body7;
+      transform: skew(calc(var(--skew) * -1));
+    }
+  }
+}
+
 @screen md {
   .key-figure {
     width: 100%;
@@ -65,6 +86,22 @@
       }
     }
   }
+
+  .advantages {
+    &-descs {
+      row-gap: 20px;
+      padding-top: 35px;
+    }
+    &-desc {
+      max-width: 484px;
+      padding: 32px;
+
+      span {
+        font-size: 2rem;
+        line-height: 1.5em;
+      }
+    }
+  }
 }
 
 @screen xl {
@@ -89,6 +126,21 @@
       &::after {
         left: -55px;
         right: 43px;
+      }
+    }
+  }
+
+  .advantages {
+    &-descs {
+      padding-top: 40px;
+      flex-direction: row;
+    }
+    &-desc {
+      max-width: 554px;
+      padding: 34px;
+
+      span {
+        font-size: 2.4rem;
       }
     }
   }

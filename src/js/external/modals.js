@@ -33,7 +33,6 @@ const setModalsClose = (modal) => {
 
 const openModal = (modal) => {
   $(modal).addClass("flex");
-  console.log(modal);
   clearTimeout(timeModal);
   timeModal = setTimeout(() => {
     $(modal).addClass("opened");

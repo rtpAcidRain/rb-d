@@ -14,7 +14,7 @@ const setBurgerMenu = () => {
 
 //
 
-function loadScript(url, callback) {
+const loadScript = (url, callback) => {
   var head = document.head;
   var script = document.createElement("script");
   script.type = "text/javascript";
@@ -24,7 +24,7 @@ function loadScript(url, callback) {
   script.onload = callback;
 
   head.appendChild(script);
-}
+};
 
 // Инициализация скриптов
 window.addEventListener("DOMContentLoaded", () => {
@@ -37,10 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
   setHeaderAnim();
   setForms();
   if ($(".swiper").length > 0) {
-    loadScript(
-      "https://rb-d.ru/bitrix/templates/rbd/js/swiper.js",
-      setSwipers()
-    );
+    loadScript("https://rb-d.ru/bitrix/templates/rbd/js/swiper.js", setSwipers);
   }
   setPartners();
   setAnchors();

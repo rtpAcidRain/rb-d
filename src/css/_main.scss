@@ -808,22 +808,22 @@ h1 {
       font-size: 4.8rem;
     }
   }
+}
 
-  .history__slide__text {
-    & > span {
-      display: -webkit-box;
-      width: 320px;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-      overflow: hidden;
+.history__slide__text {
+  & > span {
+    display: -webkit-box;
+    width: 320px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
 
-      @screen md {
-        display: block;
-        width: auto;
-        -webkit-box-orient: unset;
-        -webkit-line-clamp: unset;
-        overflow: unset;
-      }
+    @screen md {
+      display: block;
+      width: auto;
+      -webkit-box-orient: unset;
+      -webkit-line-clamp: unset;
+      overflow: unset;
     }
   }
 }
@@ -860,6 +860,103 @@ h1 {
     min-width: 44px;
     max-width: 44px;
     height: 44px;
+  }
+}
+
+.history-swiper--v2 {
+  .history__slide__title {
+    @apply absolute bottom-0 right-0 text-white;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .swiper-slide {
+    width: 282px !important;
+  }
+
+  .history__slide__text > span {
+    width: auto;
+  }
+
+  @screen md {
+    .swiper-slide {
+      width: 334px !important;
+      transition: transform ease-in-out 0.2s, opacity ease-in-out 0.2s;
+      transform: scale(0.4);
+      opacity: 0.6;
+    }
+
+    .swiper-slide-next {
+      transform-origin: left;
+    }
+    .swiper-slide-prev {
+      transform-origin: right;
+    }
+    .swiper-slide-active {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .hystory-controls {
+      .swiper-button-prev,
+      .swiper-button-next {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @screen xl {
+    .history__slide__title {
+      font-size: 90px;
+      letter-spacing: 1.8px;
+    }
+    .swiper-slide {
+      width: 588px !important;
+    }
+    .hystory-controls {
+      .swiper-button-prev,
+      .swiper-button-next {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.history-swiper--v2__pagination {
+  width: fit-content;
+  .history_pagination_button {
+    @apply border-greyBlue text-greyBlue;
+    padding: 3px 9px;
+    border: 1px solid;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px;
+    border-radius: 200px;
+    width: fit-content;
+    span {
+      display: block;
+      transform: translateY(2px);
+    }
+
+    &.active {
+      @apply border-text2 bg-text2 text-white;
+    }
+
+    @screen md {
+      padding: 3px 5.3px;
+    }
+    @screen xl {
+      padding: 7px 18.3px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 23.2px;
+    }
   }
 }
 

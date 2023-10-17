@@ -75,6 +75,70 @@ const setSwipers = () => {
     });
   }
 
+  if ($(".history-swiper--v2").length > 0) {
+    $(".history-swiper--v2")
+      .find(".swiper-slide")
+      .each(function () {
+        let year = $(this).find(".history__slide__title").text();
+        $(".history-swiper--v2__pagination").append(
+          `<button class="history_pagination_button"><span>${year}</span></button>`
+        );
+      });
+
+    const hisBut = $(".history_pagination_button");
+
+    const swiper = new Swiper(".history-swiper--v2", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      navigation: {
+        nextEl: ".history-swiper--v2 .swiper-button-next",
+        prevEl: ".history-swiper--v2 .swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 37,
+          centeredSlides: true,
+          roundLengths: true,
+          loop: true,
+          loopAdditionalSlides: 4,
+        },
+        1366: {
+          spaceBetween: 68,
+          centeredSlides: true,
+          roundLengths: true,
+          loop: true,
+          loopAdditionalSlides: 30,
+        },
+      },
+    });
+
+    function setSlide(ind) {
+      // swiper.slideTo(ind);
+      hisBut.removeClass("active");
+      hisBut.eq(ind).addClass("active");
+      document
+        .querySelector(".history_pagination_button.active")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+    }
+
+    swiper.on("slideChangeTransitionEnd", function () {
+      setSlide(this.realIndex);
+    });
+
+    hisBut.each((i, el) => {
+      $(el).on("click", () => {
+        console.log(i);
+        swiper.slideToLoop(i);
+      });
+    });
+
+    hisBut.first().addClass("active");
+  }
+
   if ($(".partners").length > 0) {
     const swiper = new Swiper(".partners .swiper", {
       slidesPerView: "auto",

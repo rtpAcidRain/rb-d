@@ -36,7 +36,12 @@
       z-index: 2;
       pointer-events: auto;
       opacity: 1;
-      @apply bottom-0 bg-white;
+      background-color: rgba(0, 0, 0, 0.5);
+      @apply bottom-0;
+
+      & > div {
+        @apply h-full xl:h-fit;
+      }
     }
 
     .icon-cross {
@@ -62,6 +67,7 @@
   .text {
     display: block;
     transform: translateY(1px);
+    white-space: nowrap;
     @apply py-4;
   }
 
@@ -90,15 +96,25 @@
   a {
     display: block;
   }
+  .icon-cross {
+    @apply md:hidden;
+    font-size: 24px;
+  }
+
   & > ul {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
   }
   &--level1 {
+    a {
+      &:hover {
+        @apply text-red;
+      }
+    }
     & > a {
       transition: color 0.2s ease-in;
-      @apply flex w-full items-center justify-between text-msub2 uppercase md:max-w-[305px] md:text-sub2 xl:w-fit xl:max-w-full xl:gap-x-[1.4rem];
+      @apply flex w-full cursor-default items-center justify-between text-msub2 uppercase md:max-w-[305px] md:text-sub2 xl:w-[267px] xl:max-w-full xl:gap-x-[1.4rem];
       span {
         margin: auto 0;
         &:first-child {
@@ -107,7 +123,7 @@
       }
 
       &:hover {
-        @apply text-red;
+        @apply text-red  xl:text-text1;
         .button--arrow {
           &::after {
             left: -3%;

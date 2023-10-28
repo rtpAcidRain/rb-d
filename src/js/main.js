@@ -33,9 +33,9 @@ window.addEventListener("DOMContentLoaded", () => {
   $(window).on("resize", function () {
     setDocHeight();
   });
-  openDroplist();
   setHeaderAnim();
-  setForms();
+  openDroplist();
+  // setForms();
   if ($(".swiper").length > 0) {
     loadScript("https://rb-d.ru/bitrix/templates/rbd/js/swiper.js", setSwipers);
   }
@@ -43,4 +43,13 @@ window.addEventListener("DOMContentLoaded", () => {
   setAnchors();
   setBurgerMenu();
   setModal();
+  if ($(".first-title").length > 0) {
+    $(".first-title").addClass("showed");
+  }
+  if ($(".hystory__open-more").length > 0) {
+    $(".hystory__open-more").on("click", function (e) {
+      e.preventDefault();
+      $(this).parent(".history__slide__text").toggleClass("opened");
+    });
+  }
 });

@@ -1,31 +1,28 @@
 // Якорные ссылки
 const setAnchors = () => {
-  $("header a:not(.menu-button, .lang-switcher, [href='/'])").on(
-    "click",
-    function (event) {
-      event.preventDefault();
-      let $anchor = $(this);
+  $("header .anchor").on("click", function (event) {
+    event.preventDefault();
+    let $anchor = $(this);
 
-      $("html, body")
-        .stop()
-        .animate(
-          {
-            scrollTop:
-              $($anchor.attr("href")).offset().top -
-              $(".header__container").outerHeight() -
-              20,
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop:
+            $($anchor.attr("href")).offset().top -
+            $(".header__container").outerHeight() -
+            20,
+        },
+        {
+          duration: 1000,
+          specialEasing: {
+            width: "linear",
+            height: "easeInOutCubic",
           },
-          {
-            duration: 1000,
-            specialEasing: {
-              width: "linear",
-              height: "easeInOutCubic",
-            },
-          }
-        );
-      $(".header").removeClass("opened");
-    }
-  );
+        }
+      );
+    $(".header").removeClass("opened");
+  });
   function removeCurrentHeader() {
     $(`header a`).each(function () {
       if ($(this).hasClass("current-anch")) {

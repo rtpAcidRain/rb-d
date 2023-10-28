@@ -78,6 +78,7 @@ function insertFormAnims() {
 }
 
 function setForms() {
+  insertFormAnims();
   var target = document.querySelector("form");
 
   var observer = new MutationObserver(function (mutations) {

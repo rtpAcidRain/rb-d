@@ -8,7 +8,11 @@ const openDroplist = () => {
 
     $els.on("click", function (e) {
       e.stopPropagation();
+      if ($(this).hasClass("sub-menu--level1") && $(window).width() >= 1366) {
+        return false;
+      }
       $els.not($(this)).removeClass("active");
+
       if (!$(this).hasClass("active")) {
         $(this).addClass("active");
         $el.addClass("opened");

@@ -828,6 +828,22 @@ h1 {
   }
 }
 
+.history__slide__text.opened {
+  & > span {
+    display: block;
+  }
+
+  .hystory__open-more .show {
+    display: none;
+  }
+  .hystory__open-more .hide {
+    display: block;
+  }
+  .hystory__open-more .icon-arrow2-down {
+    transform: rotate(180deg);
+  }
+}
+
 .hystory-controls {
   display: flex;
   align-items: center;
@@ -965,6 +981,35 @@ h1 {
   &::after {
     content: none;
   }
+}
+
+.first-title {
+  .first-title__title,
+  .first-title__description,
+  .button-primary {
+    opacity: 0;
+    transform: translateY(calc(100% + 20px));
+    transition: transform ease-in-out 300ms 500ms,
+      opacity ease-in-out 300ms 500ms;
+  }
+}
+
+.first-title + picture {
+  opacity: 2%;
+  transition: opacity ease-in-out 300ms 500ms;
+}
+
+.first-title.showed {
+  .first-title__title,
+  .first-title__description,
+  .button-primary {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.first-title.showed + picture {
+  opacity: 100%;
 }
 
 .modal {

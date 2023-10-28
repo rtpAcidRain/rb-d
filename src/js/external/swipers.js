@@ -131,7 +131,6 @@ const setSwipers = () => {
 
     hisBut.each((i, el) => {
       $(el).on("click", () => {
-        console.log(i);
         swiper.slideToLoop(i);
       });
     });

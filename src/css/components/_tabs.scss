@@ -1,0 +1,39 @@
+.tab {
+  &-filter {
+    overflow: auto;
+    &__container {
+      display: flex;
+      column-gap: 1rem;
+      row-gap: 1.6rem;
+      width: fit-content;
+      padding: 0 20px;
+    }
+    &__item {
+      @apply flex w-fit items-center justify-center whitespace-nowrap border border-greyBlue bg-transparent px-[9px] py-[3px] text-body6 text-greyBlue transition-colors xl:px-[19px] xl:py-[7px] xl:text-body5;
+      border-radius: 200px;
+      span {
+        transform: translateY(2px);
+      }
+    }
+    @screen md {
+      &__container {
+        width: absolute;
+        padding: 0;
+        flex-wrap: wrap;
+        .tab-filter--news & {
+          gap: 2rem;
+        }
+      }
+    }
+    @screen xl {
+      &__container {
+        .tab-filter--news & {
+          gap: 2.4rem;
+        }
+      }
+      &__item:hover {
+        @apply border-text2 bg-white text-text2;
+      }
+    }
+  }
+}

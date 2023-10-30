@@ -52,4 +52,23 @@ window.addEventListener("DOMContentLoaded", () => {
       $(this).parent(".history__slide__text").toggleClass("opened");
     });
   }
+
+  if ($(".partner--v2-container").length > 0) {
+    let end = false;
+    $(window).on("scroll", function () {
+      if (
+        $(window).scrollTop() + $(window).outerHeight() >=
+          $(".partner--v2-container").offset().top &&
+        !end
+      ) {
+        $(".partner--v2-container").removeClass("stop");
+        setTimeout(() => {
+          $(".partner--v2-container").removeClass(
+            "partner--v2-container--transition"
+          );
+          end = true;
+        }, 1600);
+      }
+    });
+  }
 });

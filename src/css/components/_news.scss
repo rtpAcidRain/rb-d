@@ -1,0 +1,10 @@
+.news-item {
+  @apply container flex gap-[24px] border-b border-blue;
+  padding-bottom: 24px;
+  @screen md {
+    padding-bottom: 30px;
+  }
+  @screen xl {
+    padding-bottom: 40px;
+  }
+}

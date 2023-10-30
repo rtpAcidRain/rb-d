@@ -1,32 +1,85 @@
-<div class="flex flex-col gap-20 md:gap-24 xl:gap-32">
-  <section class="default-grid relative md:container">
+<section>
+  <div class="default-grid first-block-template relative md:container">
     <div
       class="first-title container relative z-10 pt-12 md:col-span-7 md:max-w-full md:px-0 xl:col-span-6 xl:pb-4 xl:pt-16"
     >
       <div class="first-title__breadcrumbs">
         @@include('../widgets/breadcrumbs.html')
       </div>
-      <h1 class="first-title__title mb-12 md:mb-20 xl:mb-[69px]">Карьера</h1>
-      <a href="#" class="button-primary mb-[24px] md:mb-[90px] xl:mb-[93px]">
-        <span>Смотреть вакансии</span>
-        <span class="icon-arrow-right"></span>
-      </a>
+      <h1 class="first-title__title mb-[2.4rem] md:mb-12 xl:mb-16">новости</h1>
+      <p
+        class="first-title__description mb-[24px] text-body5 md:text-body4 xl:text-body3"
+      >
+        Новости о нас и сфере онлайн-<br />
+        и офлайн-ретейла
+      </p>
     </div>
 
     <picture class="">
       <source
         media="(min-width: 1366px)"
-        srcset="https://rb-d.ru/images/career/career-main--desk.jpg"
+        srcset="https://rb-d.ru/images/news/news--desk.jpg"
       />
       <source
         media="(min-width: 768px)"
-        srcset="https://rb-d.ru/images/career/career-main--tab.jpg"
+        srcset="https://rb-d.ru/images/news/news--tab.jpg"
       />
       <img
         class="angle-img right-0 top-0 block h-auto w-full object-cover md:absolute md:h-[337px] md:w-[379px] xl:h-[423px] xl:w-[632px]"
-        src="https://rb-d.ru/images/career/career-main.jpg"
+        src="https://rb-d.ru/images/news/news.jpg"
         alt=""
       />
     </picture>
-  </section>
-</div>
+  </div>
+  <div
+    class="flex flex-col gap-12 pb-20 pt-16 md:pb-24 xl:gap-20 xl:pb-32 xl:pt-24"
+  >
+    <div class="md:container">
+      <div class="tab-filter tab-filter--news no-scrollbar">
+        <div class="tab-filter__container">
+          <a href="#" class="tab-filter__item"> <span>Все</span> </a>
+          <a href="#" class="tab-filter__item"> <span>О нас</span> </a>
+          <a href="#" class="tab-filter__item">
+            <span>Онлайн-ретейл</span>
+          </a>
+          <a href="#" class="tab-filter__item">
+            <span>Офлайн-ретейл</span>
+          </a>
+          <a href="#" class="tab-filter__item"> <span>Новинки</span> </a>
+          <a href="#" class="tab-filter__item"> <span>Блог</span> </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-12 md:gap-16 xl:gap-20">
+      <a href="#" class="news-item">
+        <div class="news-item__container">
+          <div class="news-item__header">
+            <div class="news-item__date">04.10.2023</div>
+            <div class="tags">
+              <div class="tag">Онлайн-ретейл</div>
+              <div class="tag">Новинки</div>
+            </div>
+          </div>
+          <h5 class="news-item__title">
+            Эксперт предложил ввести лицензирование для продавцов БАД
+          </h5>
+          <p class="news-item__description">
+            В этом году компания Ozon инвестировала более 2 млрд рублей в
+            продвижение товаров с глубокими скидками.
+          </p>
+          <div class="button-secondary">
+            <span>Подробнее</span>
+            <span class="icon-arrow-right"></span>
+          </div>
+        </div>
+        <div class="news-item__picture">
+          <img src="https://rb-d.ru/images/news/news--desk.jpg" alt="" />
+        </div>
+        <div class="button-secondary">
+          <span>Подробнее</span>
+          <span class="icon-arrow-right"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

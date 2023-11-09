@@ -35,8 +35,8 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   setHeaderAnim();
   openDroplist();
-  // setForms();
-  if ($(".swiper").length > 0) {
+  setForms();
+  if ($(".swiper").length > 0 || $(".news-side").length > 0) {
     loadScript("https://rb-d.ru/bitrix/templates/rbd/js/swiper.js", setSwipers);
   }
   setPartners();

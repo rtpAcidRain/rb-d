@@ -1,10 +1,232 @@
 .news-item {
-  @apply container flex gap-[24px] border-b border-blue;
+  @apply container flex flex-col gap-[24px] border-b border-blue pb-[24px] md:flex-row md:gap-0 md:pb-12 xl:pb-16;
   padding-bottom: 24px;
+
+  & > .button-secondary {
+    @apply md:hidden;
+  }
+  &__container {
+    @apply flex flex-col gap-y-[24px];
+    .button-secondary {
+      @apply mt-auto hidden md:flex;
+    }
+  }
+  &__date {
+    @apply mb-[16px] text-body6 text-greyBlue md:mb-8 md:text-body5;
+  }
+  &__picture {
+    img {
+      object-fit: cover;
+      height: 41.66666666666667vw;
+      width: 100%;
+    }
+  }
+  &__title {
+    @apply xl:my-[6px];
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  &__description {
+    @apply text-body5 xl:text-body4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
   @screen md {
     padding-bottom: 30px;
+    &__title {
+      font-size: 2.4rem;
+    }
+
+    &__description {
+      -webkit-line-clamp: 4;
+    }
+
+    &__container {
+      flex: 1;
+    }
+
+    &__picture {
+      padding-left: 24px;
+      display: flex;
+      align-items: center;
+      img {
+        height: 359px;
+        width: 322px;
+      }
+    }
   }
   @screen xl {
     padding-bottom: 40px;
+    &__title {
+      font-size: 2.8rem;
+    }
+    &__description {
+      -webkit-line-clamp: 3;
+    }
+    &__picture {
+      padding-left: 31px;
+      img {
+        height: 382px;
+        width: 588px;
+      }
+    }
+  }
+}
+
+.news-single {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    text-transform: none;
+    margin-bottom: 0px;
+  }
+  &__img {
+    height: 68.61111111111111vw;
+    object-fit: cover;
+    width: 100%;
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__subtext {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23.2px;
+  }
+
+  &__text {
+    @apply text-body5 xl:text-body3;
+  }
+
+  @screen md {
+    &__title {
+      font-size: 3.2rem;
+      line-height: normal;
+      letter-spacing: 0.01em;
+    }
+    &__img {
+      height: auto;
+    }
+    &__subtext {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  @screen xl {
+    gap: 30px;
+    &__title {
+      font-size: 4.2rem;
+    }
+    &__subtext {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.news-single__page {
+  &:not(.mobile) {
+    @apply xl:grid xl:grid-cols-12 xl:gap-x-[30px];
+    .news-single {
+      @apply xl:col-span-8;
+    }
+  }
+}
+
+.news-side {
+  .news-single__page:not(.mobile) &__container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+  @screen md {
+  }
+  @screen xl {
+    .news-single__page:not(.mobile) & {
+      @apply col-span-4;
+      padding-left: 73px;
+      padding-top: 70px;
+    }
+  }
+}
+
+.news-side__item {
+  @apply w-[236px] md:w-[334px] xl:w-[308px];
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &__img {
+    img {
+      @apply h-[150px] md:h-[201px];
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__date {
+    @apply w-fit bg-lightBlue px-4 py-[4px] text-body6 text-greyBlue md:px-[16px] md:py-[8px] xl:text-body5;
+    span {
+      display: block;
+      margin-top: 0.2em;
+    }
+    border-radius: 200px;
+  }
+  &__title {
+    @apply text-body7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__text {
+    @apply text-body6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: auto;
+  }
+  &__button {
+    margin-top: 4px;
+    display: flex;
+    & > * {
+      margin-left: auto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25.2px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      .icon-arrow-right {
+        font-size: 24px;
+      }
+    }
   }
 }

@@ -7,17 +7,24 @@
       row-gap: 1.6rem;
       width: fit-content;
       padding: 0 20px;
+      .tab-filter--vacancies & {
+        column-gap: 1.6rem;
+      }
     }
     &__item {
       @apply flex w-fit items-center justify-center whitespace-nowrap border border-greyBlue bg-transparent px-[9px] py-[3px] text-body6 text-greyBlue transition-colors xl:px-[19px] xl:py-[7px] xl:text-body5;
       border-radius: 200px;
       span {
-        transform: translateY(2px);
+        margin-top: 0.2em;
+      }
+
+      &.active {
+        @apply border-text2 bg-text2 text-white;
       }
     }
     @screen md {
       &__container {
-        width: absolute;
+        width: auto;
         padding: 0;
         flex-wrap: wrap;
         .tab-filter--news & {
@@ -34,6 +41,75 @@
       &__item:hover {
         @apply border-text2 bg-white text-text2;
       }
+    }
+  }
+}
+
+.search-page {
+  @apply w-full border border-bullets-level1 bg-lightBlue;
+  cursor: pointer;
+  padding: 11px 19px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 200px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  input {
+    @apply text-body6 md:text-body5;
+    cursor: text;
+    flex: 1;
+    margin-top: 0.2em;
+  }
+
+  @screen md {
+    max-width: 423px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @screen xl {
+    max-width: 588px;
+  }
+}
+
+.pag {
+  @apply flex items-center justify-center gap-[14px];
+  li {
+    &:not(.prev, .before, :last-child:not(.active)) a {
+      @apply flex h-[36px] w-[36px] items-center justify-center border border-greyBlue text-body6 text-greyBlue transition-colors md:h-[42px] md:w-[42px] md:text-body4;
+      border-radius: 50%;
+
+      span {
+        margin-top: 0.2em;
+      }
+    }
+    @apply hidden md:block;
+
+    &:not(.prev, :last-child:not(.active)):hover a,
+    &.active a {
+      @apply border-text1 bg-text1 text-white #{!important};
+    }
+
+    &.prev,
+    &:nth-child(2),
+    &.active,
+    &.before,
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+      display: block;
+    }
+
+    .pag-arr {
+      display: block;
+      font-size: 20px;
+      padding: 6px;
     }
   }
 }

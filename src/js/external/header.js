@@ -26,15 +26,15 @@ const setHeaderAnim = () => {
   });
 
   $menuItems.each((i, el) => {
-    $(el).on("click", function (e) {
+    $(el).on("mouseenter", function (e) {
       e.preventDefault();
-      if (!$(el).hasClass("active")) {
-        openMenu(el, i);
-      } else {
-        if ($(window).width() >= 1366) {
-          closeMenu();
-        }
-      }
+      // if (!$(el).hasClass("active")) {
+      openMenu(el, i);
+      // } else {
+      //   if ($(window).width() >= 1366) {
+      //     closeMenu();
+      //   }
+      // }
     });
   });
 

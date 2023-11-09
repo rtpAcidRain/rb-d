@@ -94,20 +94,20 @@ const setSwipers = () => {
         nextEl: ".history-swiper--v2 .swiper-button-next",
         prevEl: ".history-swiper--v2 .swiper-button-prev",
       },
+      loopAdditionalSlides: 30,
+      loop: true,
       breakpoints: {
         768: {
           spaceBetween: 37,
           centeredSlides: true,
           roundLengths: true,
-          loop: true,
-          loopAdditionalSlides: 4,
         },
         1366: {
-          spaceBetween: 68,
+          spaceBetween: $(".history-swiper--v2").hasClass("paraf-slider")
+            ? 133
+            : 68,
           centeredSlides: true,
           roundLengths: true,
-          loop: true,
-          loopAdditionalSlides: 30,
         },
       },
     });
@@ -184,6 +184,63 @@ const setSwipers = () => {
       navigation: {
         nextEl: ".team-slider .swiper-button-next",
         prevEl: ".team-slider .swiper-button-prev",
+      },
+    });
+  }
+  if ($(".teams-slider").length > 0) {
+    const swiper = new Swiper(".teams-slider", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      pagination: {
+        el: ".teams-slider .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".teams-slider .swiper-button-next",
+        prevEl: ".teams-slider .swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1366: {
+          spaceBetween: 30,
+          slidesPerView: 4,
+        },
+      },
+    });
+  }
+
+  if ($(".news-side").length > 0 && $(window).width() < 1366) {
+    $(".news-single__page").addClass("mobile");
+    $(".news-side").addClass("swiper");
+    $(".news-side__container").addClass("swiper-wrapper");
+    $(".news-side__item").addClass("swiper-slide");
+    const controls = `
+        <div class="swiper-controls">
+          <div class="swiper-button-prev icon-arrow2-left" ></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next icon-arrow2-right"></div>
+        </div>
+      `;
+    $(".news-side").append(controls);
+
+    const swiper = new Swiper(".news-side", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      pagination: {
+        el: ".news-side .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".news-side .swiper-button-next",
+        prevEl: ".news-side .swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
       },
     });
   }

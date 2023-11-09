@@ -1,0 +1,41 @@
+.p404 {
+  svg {
+    margin-bottom: 24px;
+    height: auto;
+    width: 152px;
+  }
+
+  &__title {
+    @apply mb-8;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @apply text-body5 md:text-body4 xl:text-body3;
+
+    a {
+      @apply border-b border-red text-red;
+    }
+  }
+
+  @screen md {
+    svg {
+      @apply mb-12;
+      width: 290px;
+    }
+
+    &__title {
+      @apply mb-12 text-sub2;
+    }
+  }
+
+  @screen xl {
+    svg {
+      width: 303px;
+    }
+  }
+}

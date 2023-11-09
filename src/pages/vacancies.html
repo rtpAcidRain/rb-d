@@ -1,0 +1,227 @@
+<section>
+  <div class="default-grid first-block-template relative md:container">
+    <div
+      class="first-title container relative z-10 pt-12 md:col-span-7 md:max-w-full md:px-0 xl:col-span-6 xl:pb-4 xl:pt-16"
+    >
+      <div class="first-title__breadcrumbs">
+        @@include('../widgets/breadcrumbs.html')
+      </div>
+      <h1 class="first-title__title mb-[2.4rem] md:mb-12 xl:mb-16">вакансии</h1>
+      <p
+        class="first-title__description mb-[24px] text-body5 md:text-body4 xl:text-body3"
+      >
+        Открытые вакансии нашей <br class="hidden md:block" />
+        компании
+      </p>
+    </div>
+
+    <picture class="">
+      <source
+        media="(min-width: 1366px)"
+        srcset="https://rb-d.ru/images/vacancies/vacancies--desk.jpg"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="https://rb-d.ru/images/vacancies/vacancies--tab.jpg"
+      />
+      <img
+        class="angle-img right-0 top-0 block h-auto w-full object-cover md:absolute md:h-[337px] md:w-[379px] xl:h-[423px] xl:w-[632px]"
+        src="https://rb-d.ru/images/vacancies/vacancies.jpg"
+        alt=""
+      />
+    </picture>
+  </div>
+  <div class="flex flex-col pb-20 pt-16 md:pb-24 xl:pb-32 xl:pt-24">
+    <div class="container mb-12 xl:mb-16">
+      <form>
+        <label class="search-page">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="6" stroke="#606EA3" />
+            <path
+              d="M11 8C10.606 8 10.2159 8.0776 9.85195 8.22836C9.48797 8.37913 9.15726 8.6001 8.87868 8.87868C8.6001 9.15726 8.37913 9.48797 8.22836 9.85195C8.0776 10.2159 8 10.606 8 11"
+              stroke="#606EA3"
+              stroke-linecap="round"
+            />
+            <path d="M20 20L17 17" stroke="#606EA3" stroke-linecap="round" />
+          </svg>
+
+          <input type="text" placeholder="Поиск по вакансиям" />
+        </label>
+      </form>
+    </div>
+    <div class="mb-12 md:container xl:mb-16">
+      <div class="tab-filter tab-filter--vacancies no-scrollbar">
+        <div class="tab-filter__container">
+          <a href="#" class="tab-filter__item active"> <span>Все</span> </a>
+          <a href="#" class="tab-filter__item">
+            <span>Работа с сетями FMCG</span>
+          </a>
+          <a href="#" class="tab-filter__item">
+            <span>E-commerce</span>
+          </a>
+          <a href="#" class="tab-filter__item">
+            <span>Оптовые продажи</span>
+          </a>
+          <a href="#" class="tab-filter__item"> <span>Логистика</span> </a>
+          <a href="#" class="tab-filter__item"> <span>Маркетинг</span> </a>
+          <a href="#" class="tab-filter__item">
+            <span>Закупки (категорийный менеджмент)</span>
+          </a>
+          <a href="#" class="tab-filter__item"> <span>HR</span> </a>
+          <a href="#" class="tab-filter__item"> <span>Финансы</span> </a>
+          <a href="#" class="tab-filter__item"> <span>IT-диджитал</span> </a>
+        </div>
+      </div>
+    </div>
+    <div class="container flex flex-col gap-8 md:gap-12">
+      <div class="vacancy-item">
+        <div class="vacancy-item__container">
+          <h5 class="vacancy-item__title">Руководитель отдела логистики</h5>
+          <div class="vacancy-item__text">от 180 000 ₽</div>
+          <div class="tags">
+            <div class="tag"><span> Опыт от 3 лет </span></div>
+          </div>
+        </div>
+
+        <div class="vacancy-item__button">
+          <a
+            href="/single-vacancy/"
+            class="button-primary"
+            data-modal="#fromModal"
+          >
+            <span>Оставить резюме</span>
+          </a>
+          <a href="/single-vacancy/" class="button-secondary">
+            <span>Подробнее</span>
+            <span class="icon-arrow-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy-item">
+        <div class="vacancy-item__container">
+          <h5 class="vacancy-item__title">Руководитель отдела логистики</h5>
+          <div class="vacancy-item__text">от 180 000 ₽</div>
+          <div class="tags">
+            <div class="tag"><span> Опыт от 3 лет </span></div>
+          </div>
+        </div>
+
+        <div class="vacancy-item__button">
+          <a
+            href="/single-vacancy/"
+            class="button-primary"
+            data-modal="#fromModal"
+          >
+            <span>Оставить резюме</span>
+          </a>
+          <a href="/single-vacancy/" class="button-secondary">
+            <span>Подробнее</span>
+            <span class="icon-arrow-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy-item">
+        <div class="vacancy-item__container">
+          <h5 class="vacancy-item__title">Руководитель отдела логистики</h5>
+          <div class="vacancy-item__text">от 180 000 ₽</div>
+          <div class="tags">
+            <div class="tag"><span> Опыт от 3 лет </span></div>
+          </div>
+        </div>
+
+        <div class="vacancy-item__button">
+          <a
+            href="/single-vacancy/"
+            class="button-primary"
+            data-modal="#fromModal"
+          >
+            <span>Оставить резюме</span>
+          </a>
+          <a href="/single-vacancy/" class="button-secondary">
+            <span>Подробнее</span>
+            <span class="icon-arrow-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy-item">
+        <div class="vacancy-item__container">
+          <h5 class="vacancy-item__title">Руководитель отдела логистики</h5>
+          <div class="vacancy-item__text">от 180 000 ₽</div>
+          <div class="tags">
+            <div class="tag"><span> Опыт от 3 лет </span></div>
+          </div>
+        </div>
+
+        <div class="vacancy-item__button">
+          <a
+            href="/single-vacancy/"
+            class="button-primary"
+            data-modal="#fromModal"
+          >
+            <span>Оставить резюме</span>
+          </a>
+          <a href="/single-vacancy/" class="button-secondary">
+            <span>Подробнее</span>
+            <span class="icon-arrow-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="vacancy-item">
+        <div class="vacancy-item__container">
+          <h5 class="vacancy-item__title">Руководитель отдела логистики</h5>
+          <div class="vacancy-item__text">от 180 000 ₽</div>
+          <div class="tags">
+            <div class="tag"><span> Опыт от 3 лет </span></div>
+          </div>
+        </div>
+
+        <div class="vacancy-item__button">
+          <a
+            href="/single-vacancy/"
+            class="button-primary"
+            data-modal="#fromModal"
+          >
+            <span>Оставить резюме</span>
+          </a>
+          <a href="/single-vacancy/" class="button-secondary">
+            <span>Подробнее</span>
+            <span class="icon-arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-12 md:mt-16">
+      <ul class="pag">
+        <li class="prev">
+          <a href="#"><span class="icon-arrow2-left pag-arr"></span></a>
+        </li>
+        <li>
+          <a href="#"><span>1</span></a>
+        </li>
+        <li style="display: flex">
+          <a href="#"><span>2</span></a>
+        </li>
+        <li class="active">
+          <a href="#"><span>3</span></a>
+        </li>
+        <li style="display: flex">
+          <a href="#"><span>4</span></a>
+        </li>
+        <li>
+          <a href="#"><span>5</span></a>
+        </li>
+        <li class="before"><span>...</span></li>
+        <li>
+          <a href="#"><span>16</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="icon-arrow2-right pag-arr"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

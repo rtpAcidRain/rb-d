@@ -32,12 +32,25 @@
     height: 10px;
     background-color: #ffffff;
     border-radius: 50%;
+    .carousel-words--reverse-colors & {
+      @apply bg-text2;
+    }
   }
 
   .marquee {
     animation: scroll 20s linear infinite;
   }
 
+  &--reverse-colors {
+    @apply bg-bullets-level1;
+    .word {
+      @apply text-text2;
+    }
+
+    .dot {
+      @apply bg-text2;
+    }
+  }
   @keyframes scroll {
     from {
       transform: translateX(0);

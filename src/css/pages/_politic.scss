@@ -1,0 +1,10 @@
+.politic {
+  h2 {
+    @apply mb-8 text-body7 xl:mb-[24px] xl:text-body2;
+    text-transform: none;
+  }
+
+  p {
+    @apply text-body5 xl:text-body3;
+  }
+}

@@ -5,7 +5,7 @@
 .bread-crumb {
   @apply flex items-center gap-[0.2rem] text-body6 text-greyBlue;
   span {
-    margin-top: 0.2em;
+    transform: translateY(0.2em);
     display: block;
   }
   &:not(:first-child):before {

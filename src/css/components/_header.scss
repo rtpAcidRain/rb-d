@@ -37,7 +37,8 @@
       pointer-events: auto;
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.5);
-      @apply bottom-0;
+      @apply bottom-0 xl:bottom-auto;
+      box-shadow: 0px 20px 40px 0px rgba(96, 110, 163, 0.15);
 
       & > div {
         @apply h-full xl:h-fit;
@@ -66,7 +67,6 @@
 
   .text {
     display: block;
-    transform: translateY(1px);
     white-space: nowrap;
     @apply py-4;
   }

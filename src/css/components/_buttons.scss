@@ -4,7 +4,6 @@
     border-color 0.2s ease-in;
   span {
     @apply text-body5;
-    transform: translateY(1px);
     display: flex;
     align-items: center;
   }
@@ -320,6 +319,21 @@
     .link-card__title {
       font-size: 4.2rem;
     }
+  }
+}
+
+.link-card--single {
+  max-width: 100%;
+  .link-card__title {
+  }
+
+  @screen md {
+    max-width: 100%;
+    padding: 40px 30px;
+  }
+  @screen xl {
+    max-width: 100%;
+    padding: 40px;
   }
 }
 

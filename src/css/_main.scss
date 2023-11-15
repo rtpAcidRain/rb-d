@@ -89,6 +89,7 @@ h2 {
 
   @screen xl {
     font-size: 5.4rem;
+    line-height: 65px;
   }
 }
 
@@ -105,8 +106,21 @@ h1 {
   }
 
   @screen xl {
+    transform: translateY(0.1em);
     font-size: 7rem;
     letter-spacing: 0.03em;
+  }
+}
+
+h1,
+h2,
+p,
+span {
+  @screen md {
+  }
+
+  @screen xl {
+    @apply translate-y-[0.1em];
   }
 }
 
@@ -128,9 +142,31 @@ h1 {
   }
   @screen md {
     clip-path: polygon(0 0%, 100% 0, 100% 100%, 62% 100%);
+
+    &.angle-img--rev {
+      clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+    &.angle-img--rev-r {
+      clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .btb-advantage & {
+      clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
+    }
   }
   @screen xl {
     clip-path: polygon(0 0%, 100% 0, 100% 100%, 47% 100%);
+    &.angle-img--rev {
+      clip-path: polygon(47% 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &.angle-img--rev-r {
+      clip-path: polygon(0% 0%, 53% 0, 100% 100%, 0% 100%);
+    }
+
+    .btb-advantage & {
+      clip-path: polygon(0 0%, 100% 0, 100% 100%, 47% 100%);
+    }
   }
 }
 
@@ -2364,6 +2400,7 @@ h1 {
   }
 
   @screen md {
+    width: 100%;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -64,7 +64,7 @@ module.exports = {
         },
       ],
       body4: ["1.8rem", "1.45em"],
-      body5: ["1.6rem", "1.45em"],
+      body5: ["1.6rem", "1.4375em"],
       body6: ["1.4rem", "1.4em"],
       body7: [
         "1.6rem",

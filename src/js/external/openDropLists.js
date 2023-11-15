@@ -4,8 +4,7 @@ const openDroplist = () => {
 
   $drop.each(function () {
     const $el = $(this);
-    const $els = $el.children(".drop-down:not(.disabled)");
-
+    const $els = $el.find(".drop-down:not(.disabled)");
     $els.on("click", function (e) {
       e.stopPropagation();
       if ($(this).hasClass("sub-menu--level1") && $(window).width() >= 1366) {

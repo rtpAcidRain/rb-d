@@ -1,0 +1,83 @@
+<div class="container pb-20 pt-12 md:pb-24 xl:pb-32 xl:pt-16">
+  <div class="first-title__breadcrumbs">
+    @@include('../widgets/breadcrumbs.html')
+  </div>
+  <div class="default-grid form-section feedback-block pb-0">
+    <div class="col-span-6 mb-[36px] md:mb-16">
+      <h1>
+        обращение <br class="hidden xl:block" />
+        клиентов
+      </h1>
+      <p class="text-body5 md:text-body4 xl:text-body1">
+        Заполните и отправьте форму обращения
+      </p>
+    </div>
+    <form
+      class="feedback md:col-span-6 md:col-start-2 xl:col-span-5 xl:col-start-7"
+    >
+      <div class="inputs">
+        <label class="input input--name hovered-line-anim">
+          <span class="input__title">Ваше обращение**</span>
+          <input
+            class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+            type="text"
+          />
+        </label>
+        <label class="input input--name hovered-line-anim">
+          <span class="input__title">ФИО*</span>
+          <input
+            class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+            type="text"
+          />
+        </label>
+
+        <label class="input input--phone hovered-line-anim">
+          <span class="input__title">Телефон*</span>
+          <input
+            class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+            type="text"
+          />
+        </label>
+        <label class="input input--email hovered-line-anim">
+          <span class="input__title">Почта*</span>
+          <input
+            class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+            type="text"
+          />
+        </label>
+        <label class="input input--company hovered-line-anim">
+          <span class="input__title">Дата покупки и номер заказа*</span>
+          <input
+            class="input__item text-body4 xl:text-[2rem] xl:leading-[1.45em]"
+            type="text"
+          />
+        </label>
+      </div>
+      <label
+        class="attachment-button ml-auto mt-8 flex w-fit cursor-pointer items-center text-text2 hover:text-red"
+      >
+        <input type="file" name="attachment" id="" class="invisible h-0 w-0" />
+        <span class="icon-link mr-[4px] text-[24px]"></span>
+        <span>Прикрепить файл</span>
+      </label>
+
+      <div class="button__container check__container">
+        <button type="submit" class="button-primary w-full" disabled>
+          <span>Отправить</span>
+        </button>
+        <div class="checkbox-item flex items-center gap-8">
+          <label class="checkbox">
+            <input type="checkbox" />
+            <div class="checkbox__item"></div>
+          </label>
+          <p class="text-body6">
+            Подтверждаю согласие с
+            <a href="#" class="text-red"
+              >политикой обработки персональных данных</a
+            >
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

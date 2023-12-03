@@ -1,0 +1,505 @@
+<div class="flex flex-col gap-20 md:gap-24 xl:gap-32">
+  <section class="default-grid first-block-template relative md:container">
+    <div
+      class="first-title container relative z-10 pt-12 md:col-span-7 md:max-w-full md:px-0 xl:col-span-6 xl:pb-4 xl:pt-16"
+    >
+      <div class="first-title__breadcrumbs">
+        @@include('../widgets/breadcrumbs.html')
+      </div>
+      <h1 class="first-title__title mb-[2.4rem] md:mb-12 xl:mb-16">
+        НАШИ <br class="hidden md:block" />
+        СЕРВИСЫ
+      </h1>
+    </div>
+
+    <picture class="">
+      <source
+        media="(min-width: 1366px)"
+        srcset="https://rb-d.ru/images/service/service-head--desk.jpg"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="https://rb-d.ru/images/service/service-head--tab.jpg"
+      />
+      <img
+        class="angle-img right-0 top-0 block h-auto w-full object-cover md:absolute md:h-[337px] md:w-[379px] xl:h-[423px] xl:w-[632px]"
+        src="https://rb-d.ru/images/service/service-head.jpg"
+        alt=""
+      />
+    </picture>
+  </section>
+  <section>
+    <div class="container mb-12 xl:mb-16">
+      <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+      <div
+        class="mb-[24px] md:mb-12 md:max-w-[511px] xl:mb-16 xl:max-w-[691px]"
+      >
+        <p class="text-body5 xl:text-body3">
+          <span class="line block h-[1px] w-[73px] bg-text1"></span>
+          Мы предлагаем нашим партнерам современный автоматизированный
+          инструмент для ведения бизнеса в виде личного кабинета на сайте.Где
+          вы можете мониторить и отслеживать продажи, получать отчетность
+          и заказывать маркетинговые услуги для продвижения.
+        </p>
+      </div>
+      <a href="#" class="button-primary" data-modal="#fromModal">
+        <span>Попробовать демо-версию</span>
+      </a>
+    </div>
+    <div class="switcher reports">
+      <div
+        class="marketing-promotion__tab-filter tab-filter reports__filter no-scrollbar md:container"
+      >
+        <div
+          class="tab-filter__container reports__filter-container text-body5 xl:text-body4"
+        >
+          <a class="switcher__tab active" href="#"><span>Отчеты</span></a>
+          <a class="switcher__tab" href="#">
+            <span>Услуги маркетинга в онлайн-ретейле</span>
+          </a>
+          <a class="switcher__tab" href="#">
+            <span>Услуги маркетинга в офлайн-ретейле</span>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="switcher__el reports__el active">
+          <div class="mb-[24px] md:mb-12 xl:mb-16 xl:max-w-[691px]">
+            <p class="text-body5 xl:text-body3">
+              <span class="line block h-[1px] w-[73px] bg-text1"></span>
+              В одном месте вы сможете получать отчетность по вторичным
+              продажам, а также отчеты по продажам в сетях/маркетплейсах,
+              а также мониторить и контролировать наличие остатков на складах
+              и взаиморасчетов.
+            </p>
+          </div>
+          <div class="mb-[24px] md:mb-12 xl:mb-16">
+            <a href="#" class="button-primary" data-modal="#fromModal">
+              <span>Получить консультацию</span>
+            </a>
+          </div>
+          <div class="select">
+            <select>
+              <option value="1">Sell-in отчет</option>
+              <option value="2">Sell-out отчет</option>
+              <option value="3">Акты сверки</option>
+              <option value="4">Отчет по остаткам</option>
+            </select>
+            <div class="select-title">
+              <p>Виды отчетов</p>
+              <span class="icon-arrow2-down"></span>
+            </div>
+          </div>
+        </div>
+        <div class="switcher__el reports__el">
+          <div class="mb-[24px] md:mb-12 xl:mb-16 xl:max-w-[691px]">
+            <p class="text-body5 xl:text-body3">
+              <span class="line block h-[1px] w-[73px] bg-text1"></span>
+              Наглядная демонстрация эффективности маркетинговых мероприятий
+              и маркетинговая аналитика по онлайн-ретейлу с возможностью
+              заказать и получить нужный отчет за выбранный период времени.
+            </p>
+          </div>
+          <div class="mb-[24px] md:mb-12 xl:mb-16">
+            <a href="#" class="button-primary" data-modal="#fromModal">
+              <span>Получить консультацию</span>
+            </a>
+          </div>
+          <div class="select">
+            <select>
+              <option value="1">Анализ товарной ниши и конкурентов</option>
+              <option value="2">Анализ ценообразования</option>
+              <option value="3">Предложения по ассортиментной матрице</option>
+              <option value="4">Анализ географии присутствия товаров</option>
+              <option value="5">Создание продающих карточек товаров</option>
+              <option value="6">
+                Разработка стратегии продаж и юнит экономики
+              </option>
+              <option value="7">Создание бренд зоны</option>
+              <option value="8">Продвижение карточек товаров в поиске</option>
+              <option value="9">
+                Привлечение внешнего трафика на карточку товара
+              </option>
+              <option value="10">Работа с репутацией и отзывами</option>
+              <option value="11">План участия в акциях площадок</option>
+              <option value="12">Отчет по маркетинговой активности</option>
+              <option value="13">Парсинг цен</option>
+            </select>
+            <div class="select-title">
+              <p>Виды услуг</p>
+              <span class="icon-arrow2-down"></span>
+            </div>
+          </div>
+        </div>
+        <div class="switcher__el reports__el">
+          <div class="mb-[24px] md:mb-12 xl:mb-16 xl:max-w-[691px]">
+            <p class="text-body5 xl:text-body3">
+              <span class="line block h-[1px] w-[73px] bg-text1"></span>
+              Наглядная демонстрация эффективности маркетинговых мероприятий
+              и маркетинговая аналитика по офлайн-ретейлу с возможностью
+              заказать и получить нужный отчёт за выбранный период времени.
+            </p>
+          </div>
+          <div class="mb-[24px] md:mb-12 xl:mb-16">
+            <a href="#" class="button-primary" data-modal="#fromModal">
+              <span>Получить консультацию</span>
+            </a>
+          </div>
+          <div class="select">
+            <select>
+              <option value="1">
+                Анализ конкурентов в соседних супермаркетах
+              </option>
+              <option value="2">
+                Анализ конкурентов среди товаров на полке в этой категории
+              </option>
+              <option value="3">Предложения по ассортиментной матрице</option>
+              <option value="4">
+                Анализ ценообразования, предложений по РРЦ
+              </option>
+              <option value="5">План промомероприятий на ввод продукта</option>
+              <option value="6">Планограмма</option>
+              <option value="7">Отчет по маркетинговой активности</option>
+              <option value="8">Парсинг цен</option>
+            </select>
+            <div class="select-title">
+              <p>Виды услуг</p>
+              <span class="icon-arrow2-down"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="switcher">
+    <div class="container">
+      <h2>ПАКЕТЫ УСЛУГ</h2>
+      <div class="my-[24px] md:my-12 md:max-w-[511px] xl:my-16">
+        <p class="text-body5 xl:text-body3">
+          <span class="line block h-[1px] w-[73px] bg-text1"></span>
+          Мы предлагаем нашим партнерам пакеты услуг по выгодным ценам.
+        </p>
+      </div>
+    </div>
+    <div
+      class="marketing-promotion__tab-filter tab-filter no-scrollbar md:container"
+    >
+      <div class="tab-filter__container">
+        <a
+          catid=""
+          class="tab-filter__item active switcher__tab"
+          href="/ru/news/"
+          ><span>Онлайн-ретейл</span></a
+        >
+        <a
+          catid="blog"
+          class="tab-filter__item switcher__tab"
+          href="/ru/news/blog/"
+        >
+          <span>Офлайн-ретейл</span>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="marketing-promotion__container switcher__el active relative md:container"
+    >
+      <div
+        class="my-[24px] px-8 md:my-12 md:max-w-[511px] md:px-0 xl:mt-16 xl:max-w-[793px]"
+      >
+        <p class="text-body5 xl:text-body3">
+          <span class="line block h-[1px] w-[73px] bg-text1"></span>
+          Разработка контента и продвижение на маркетплейсах. При совокупности
+          использования всех маркетинговых инструментов вероятность покупки
+          составит не менее 90%.
+        </p>
+      </div>
+      <div
+        class="marketing-promotion swiper overflow-visible px-8 md:overflow-hidden md:px-0 xl:overflow-visible"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide marketing-promotion__el">
+            <div class="marketing-promotion__el__header">
+              <h3>Базовый</h3>
+            </div>
+            <div class="marketing-promotion__el__main">
+              <ul>
+                <li>Создание продающей карточки товара - БЕСПЛАТНО.</li>
+                <li>Загрузка карточки в ЛК селлера.</li>
+                <li>Размещение товаров на складах МП.</li>
+                <li>Контроль и своевременное пополнение стоков.</li>
+                <li>Продвижение в поиске.</li>
+                <li>Трафареты.</li>
+                <li>Участие в акциях площадки.</li>
+                <li>Отзывы за баллы.</li>
+                <li>Ежемесячный отчет по продажам и эффективности РК.</li>
+              </ul>
+              <a href="#" class="button-primary flex w-full">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide marketing-promotion__el marketing-promotion__el--primary"
+          >
+            <div class="marketing-promotion__el__header">
+              <h3>Стандарт</h3>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M10.3671 4.06132C9.6671 4.56707 5 8.15805 5 13.9996C5 14.9188 5.18106 15.8291 5.53284 16.6784C5.88463 17.5277 6.40024 18.2993 7.05025 18.9493C7.70026 19.5993 8.47194 20.115 9.32122 20.4667C10.146 20.8084 11.0282 20.989 11.9203 20.9991C9.74796 20.9567 8 19.1824 8 16.9999C8 16.8024 8.01432 16.6082 8.04197 16.4184C8.04315 16.4071 8.04459 16.3957 8.04628 16.3843C8.3817 14.1305 10.4553 12.2171 11.4581 11.4101C11.7785 11.1523 12.2216 11.1523 12.5421 11.4101C13.5448 12.2171 15.6183 14.1305 15.9537 16.3843C15.9554 16.3957 15.9569 16.4071 15.958 16.4184C15.9857 16.6082 16 16.8024 16 16.9999C16 19.1824 14.252 20.9567 12.0797 20.9991C12.9718 20.989 13.854 20.8084 14.6788 20.4667C15.5281 20.115 16.2997 19.5993 16.9497 18.9493C17.5998 18.2993 18.1154 17.5277 18.4672 16.6784C18.807 15.8579 18.9875 14.9804 18.9994 14.093C18.9998 14.0815 19 14.07 19 14.0584L18.9999 14.0268L19 13.9997C18.9736 9.75902 16.1044 7.4446 15.5813 7.05781C15.5323 7.02155 15.4671 7.02196 15.4181 7.05823C15.2083 7.21337 14.6241 7.67639 13.9967 8.44729C13.9251 8.53521 13.7845 8.5184 13.7361 8.41591C12.5573 5.92135 10.9243 4.40726 10.5386 4.07102C10.4888 4.02764 10.4206 4.02266 10.3671 4.06132Z"
+                    fill="#162148"
+                  />
+                </svg>
+                <span> Самый популярный </span>
+              </p>
+            </div>
+            <div class="marketing-promotion__el__main">
+              <ul>
+                <li>БАЗОВЫЙ ПАКЕТ плюс:</li>
+                <li>Видеообложка в карточке товара.</li>
+                <li>Съемка распаковки продукта.</li>
+                <li>Тестирование гипотез по контенту 1 раз в квартал.</li>
+                <li>Брендзона.</li>
+                <li>Баннеры в категории/на главной странице.</li>
+                <li>Отчет 2 раза в месяц по продажам и эффективности РК.</li>
+                <li>Рекомендации по стоку, ассортименту и продвижению.</li>
+              </ul>
+              <a href="#" class="button-primary flex w-full">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide marketing-promotion__el">
+            <div class="marketing-promotion__el__header">
+              <h3>Продвинутый</h3>
+            </div>
+            <div class="marketing-promotion__el__main">
+              <ul>
+                <li>СТАНДАРТНЫЙ ПАКЕТ плюс:</li>
+                <li>Профессиональная фотосессия продукта.</li>
+                <li>Съемка имиджевого ролика.</li>
+                <li>Изменение концепции карточки под сезон и праздники.</li>
+                <li>Рассылка push-уведомлений.</li>
+                <li>ТВ-размещение.</li>
+                <li>
+                  Инфлюенс-маркетинг: интеграции с блогерами в Instagram,
+                  YouTube, Telegram, VK.
+                </li>
+                <li>
+                  Инструменты по привлечению внешнего трафика: реклама в
+                  MYTARGET, контекстная реклама в YANDEX, smart-баннеры, реклама
+                  в поиске, кампании в РСЯ.
+                </li>
+                <li>
+                  Еженедельный отчет по продажам и эффективности РК,
+                  рекомендации по ассортименту (АВС-анализ).
+                </li>
+                <li>
+                  Стратегия продвижения на год с расчетом целевых показателей.
+                </li>
+              </ul>
+              <a href="#" class="button-primary flex w-full">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marketing-promotion-control hidden md:flex xl:hidden">
+        <div class="swiper-button-prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 26 26"
+            fill="none"
+            class="rotate-180"
+          >
+            <path d="M9.875 6.75L16.125 13L9.875 19.25" stroke="#606EA3" />
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 26 26"
+            fill="none"
+          >
+            <path d="M9.875 6.75L16.125 13L9.875 19.25" stroke="#606EA3" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="marketing-promotion__container switcher__el relative md:container"
+    >
+      <div
+        class="my-[24px] px-8 md:my-12 md:max-w-[511px] md:px-0 xl:mt-16 xl:max-w-[793px]"
+      >
+        <p class="text-body5 xl:text-body3">
+          <span class="line block h-[1px] w-[73px] bg-text1"></span>
+          Заведение ассортимента в федеральную сеть в офлайн- и онлайн-форматах.
+          При совокупности использования всех маркетинговых инструментов норма
+          оборачиваемости с полки увеличится на 50%.
+        </p>
+      </div>
+      <div
+        class="marketing-promotion swiper overflow-visible px-8 md:overflow-hidden md:px-0 xl:overflow-visible"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide marketing-promotion__el">
+            <div class="marketing-promotion__el__header">
+              <h3>Базовый</h3>
+            </div>
+            <div class="marketing-promotion__el__main">
+              <ul>
+                <li>Заведение товара в ассортиментную матрицу сети.</li>
+                <li>
+                  Создание продающей карточки товара для онлайн-площадки сети -
+                  БЕСПЛАТНО.
+                </li>
+                <li>Мерчендайзинг товара на полке.</li>
+                <li>Запуск промоакции для старта продаж.</li>
+                <li>Обучение персонала.</li>
+                <li>Участие в акциях сети в онлайн- и офлайн-форматах.</li>
+                <li>Ежемесячный отчет по продажам и эффективности РК.</li>
+              </ul>
+              <a href="#" class="button-primary flex w-full">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide marketing-promotion__el marketing-promotion__el--primary"
+          >
+            <div class="marketing-promotion__el__header">
+              <h3>Стандарт</h3>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M10.3671 4.06132C9.6671 4.56707 5 8.15805 5 13.9996C5 14.9188 5.18106 15.8291 5.53284 16.6784C5.88463 17.5277 6.40024 18.2993 7.05025 18.9493C7.70026 19.5993 8.47194 20.115 9.32122 20.4667C10.146 20.8084 11.0282 20.989 11.9203 20.9991C9.74796 20.9567 8 19.1824 8 16.9999C8 16.8024 8.01432 16.6082 8.04197 16.4184C8.04315 16.4071 8.04459 16.3957 8.04628 16.3843C8.3817 14.1305 10.4553 12.2171 11.4581 11.4101C11.7785 11.1523 12.2216 11.1523 12.5421 11.4101C13.5448 12.2171 15.6183 14.1305 15.9537 16.3843C15.9554 16.3957 15.9569 16.4071 15.958 16.4184C15.9857 16.6082 16 16.8024 16 16.9999C16 19.1824 14.252 20.9567 12.0797 20.9991C12.9718 20.989 13.854 20.8084 14.6788 20.4667C15.5281 20.115 16.2997 19.5993 16.9497 18.9493C17.5998 18.2993 18.1154 17.5277 18.4672 16.6784C18.807 15.8579 18.9875 14.9804 18.9994 14.093C18.9998 14.0815 19 14.07 19 14.0584L18.9999 14.0268L19 13.9997C18.9736 9.75902 16.1044 7.4446 15.5813 7.05781C15.5323 7.02155 15.4671 7.02196 15.4181 7.05823C15.2083 7.21337 14.6241 7.67639 13.9967 8.44729C13.9251 8.53521 13.7845 8.5184 13.7361 8.41591C12.5573 5.92135 10.9243 4.40726 10.5386 4.07102C10.4888 4.02764 10.4206 4.02266 10.3671 4.06132Z"
+                    fill="#162148"
+                  />
+                </svg>
+                <span> Самый популярный </span>
+              </p>
+            </div>
+            <div class="marketing-promotion__el__main">
+              <ul>
+                <li>БАЗОВЫЙ ПАКЕТ плюс:</li>
+                <li>Промоутеры в точках сети</li>
+                <li>
+                  В онлайн-магазине сети закрепление товара в топе категории и в
+                  поиске.
+                </li>
+                <li>Работа с отзывами.</li>
+                <li>Мотивация персонала.</li>
+                <li>Отчет 2 раза в месяц по продажам и эффективности РК.</li>
+                <li>Рекомендации по стоку, ассортименту и продвижению.</li>
+              </ul>
+              <a href="#" class="button-primary flex w-full">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide marketing-promotion__el">
+            <div class="marketing-promotion__el__header">
+              <h3>Продвинутый</h3>
+            </div>
+            <div class="marketing-promotion__el__main">
+              <ul>
+                <li>СТАНДАРТНЫЙ ПАКЕТ плюс:</li>
+                <li>Заведение товара в прикассовую зону.</li>
+                <li>Баннер на главной странице и в разделе Акции.</li>
+                <li>"Участие в рассылках и push-уведомлениях."</li>
+                <li>Супервайзеры в торговых точках.</li>
+                <li>
+                  Инфлюенс-маркетинг: интеграции с блогерами в Instagram,
+                  YouTube, Telegram, VK.
+                </li>
+                <li>
+                  Еженедельный отчет по продажам и эффективности РК,
+                  рекомендации по ассортименту (АВС-анализ).
+                </li>
+                <li>
+                  Стратегия продаж и продвижения на год с расчетом целевых
+                  показателей.
+                </li>
+              </ul>
+              <a href="#" class="button-primary flex w-full">
+                <span>Заказать</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marketing-promotion-control hidden md:flex xl:hidden">
+        <div class="swiper-button-prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 26 26"
+            fill="none"
+            class="rotate-180"
+          >
+            <path d="M9.875 6.75L16.125 13L9.875 19.25" stroke="#606EA3" />
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 26 26"
+            fill="none"
+          >
+            <path d="M9.875 6.75L16.125 13L9.875 19.25" stroke="#606EA3" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2>ФИНАНСОВЫЕ ИНСТРУМЕНТЫ</h2>
+      <div class="my-[24px] md:my-12 md:max-w-[511px] xl:my-16">
+        <p class="text-body5 xl:text-body3">
+          <span class="line block h-[1px] w-[73px] bg-text1"></span>
+          Мы предлагаем нашим партнерам услуги, позволяющие облегчить финансовую
+          нагрузку
+        </p>
+      </div>
+    </div>
+    <div class="advantages-descs serv container pt-0">
+      <div class="advantages-desc">
+        <span> Факторинг </span>
+      </div>
+      <div class="advantages-desc">
+        <span> Ранняя оплата </span>
+      </div>
+    </div>
+    <div class="container mt-[24px] md:mt-12 xl:mt-16">
+      <a href="#" class="button-primary" data-modal="#fromModal">
+        <span>Получить консультацию</span>
+      </a>
+    </div>
+  </section>
+  <div class="mb-20 md:mb-24 xl:mb-32">
+    <div class="link-cards link-cards--big flex md:grid">
+      <a
+        href="/ru/suppliers-and-manufacturers/"
+        class="link-card link-card--big"
+      >
+        <span class="link-card__title">Стать поставщиком</span>
+        <span class="icon-arrow-right link-card__arrow"></span>
+      </a>
+      <a href="/ru/buyers-and-purchasers/" class="link-card link-card--big">
+        <span class="link-card__title">Стать покупателем</span>
+        <span class="icon-arrow-right link-card__arrow"></span>
+      </a>
+    </div>
+  </div>
+</div>

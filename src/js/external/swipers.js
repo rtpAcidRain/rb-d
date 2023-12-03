@@ -176,7 +176,6 @@ const setSwipers = () => {
     const swiper = new Swiper(".team-slider", {
       slidesPerView: 1,
       spaceBetween: 20,
-      autoHeight: true,
       pagination: {
         el: ".team-slider .swiper-pagination",
         clickable: true,
@@ -184,6 +183,50 @@ const setSwipers = () => {
       navigation: {
         nextEl: ".team-slider .swiper-button-next",
         prevEl: ".team-slider .swiper-button-prev",
+      },
+    });
+  }
+  if ($(".marketing-promotion").length > 0) {
+    const swiper = new Swiper(".marketing-promotion", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      navigation: {
+        nextEl: ".marketing-promotion-control .swiper-button-next",
+        prevEl: ".marketing-promotion-control .swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
+  if ($(".piz-new").length > 0) {
+    const swiper = new Swiper(".piz-new .swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      pagination: {
+        el: ".piz-new .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".piz-new .swiper-button-next",
+        prevEl: ".piz-new .swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
       },
     });
   }

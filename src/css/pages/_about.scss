@@ -45,6 +45,11 @@
     transform: skew(var(--skew));
     padding: 10px 0 13px;
 
+    .serv & {
+      max-width: 270px;
+      padding: 23px;
+    }
+
     span {
       @apply block text-center text-body7;
       transform: skew(calc(var(--skew) * -1));
@@ -91,11 +96,18 @@
     &-descs {
       row-gap: 20px;
       padding-top: 35px;
+
+      &.serv {
+        flex-direction: row;
+      }
     }
     &-desc {
       max-width: 484px;
       padding: 32px;
-
+      .serv & {
+        max-width: 296px;
+        padding: 47px;
+      }
       span {
         font-size: 2rem;
         line-height: 1.5em;
@@ -138,6 +150,11 @@
     &-desc {
       max-width: 554px;
       padding: 34px;
+
+      .serv & {
+        max-width: 554px;
+        padding: 52px;
+      }
 
       span {
         font-size: 2.4rem;

@@ -1,3 +1,25 @@
 .footer {
   padding: 2.4rem 0;
 }
+
+.footer-contacts {
+  //   class=""
+  // class=""
+
+  & > li {
+    &:nth-child(1) {
+      @apply xl:mr-[72px];
+
+      .langen & {
+        @apply xl:mr-[55px];
+      }
+    }
+    &:nth-child(2) {
+      @apply xl:mr-[51px];
+
+      .langen & {
+        @apply xl:mr-[75px];
+      }
+    }
+  }
+}

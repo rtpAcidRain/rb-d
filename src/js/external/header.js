@@ -38,8 +38,10 @@ const setHeaderAnim = () => {
     });
   });
 
-  $(".header-menu").on("click", function () {
-    closeMenu();
+  $(".header-menu").on("mouseleave", function () {
+    if ($(".header:hover").length == 0) {
+      closeMenu();
+    }
   });
   $(".header-menu > div").on("click", function (e) {
     e.stopPropagation();

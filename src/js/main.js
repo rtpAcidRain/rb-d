@@ -71,4 +71,15 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  $(".seo-block").each(function () {
+    if ($(this).find(".seo-block__text").text().split("\n").length > 9) {
+      $(this).addClass("seo-block__hidden");
+      $(this)
+        .find(".seo-block__more")
+        .on("click", () => {
+          $(this).removeClass("seo-block__hidden");
+        });
+    }
+  });
 });

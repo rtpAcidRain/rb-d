@@ -33,6 +33,9 @@
     "build": "gulp prod",
     "prod": "gulp prod"
   },
+  "browserslist": [
+    "cover 99.5%"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manjumjn/gulp-with-tailwindcss.git"

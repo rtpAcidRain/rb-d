@@ -1,27 +1,5 @@
 // Партнеры
 const setPartners = () => {
-  if ($(".partner-list__switch").length > 0) {
-    const $switcher = $(".partner-list__switch");
-
-    $switcher.each((_, el) => {
-      $(el).click(function (e) {
-        e.preventDefault();
-        const id = $(this).data("drop");
-        $(".partner-list__drop-down__item")
-          .not($(`#${id}`))
-          .removeClass("opened");
-        $(`[data-drop]`).removeClass("current");
-        if ($(`#${id}`).hasClass("opened")) {
-          $(`#${id}`).removeClass("opened");
-          $(`[data-drop='${id}']`).removeClass("current");
-        } else {
-          $(`#${id}`).addClass("opened");
-          $(`[data-drop='${id}']`).addClass("current");
-        }
-      });
-    });
-  }
-
   if ($(".partner-list__switchers").length > 0) {
     $(".partner-list__switchers").each((_, el) => {
       const $first = $(el).children(".wrap").first();

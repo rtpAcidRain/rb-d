@@ -1,8 +1,9 @@
 // Слайдеры
-
 const setSwipers = () => {
+  const sliderSpeed = 700;
   if ($("#product-category").length > 0) {
     const swiper = new Swiper("#product-category .swiper", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       pagination: {
         el: "#product-category .swiper-pagination",
@@ -25,6 +26,7 @@ const setSwipers = () => {
 
   if ($("#product-category2").length > 0) {
     const swiper = new Swiper("#product-category2 .swiper", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       pagination: {
         el: "#product-category2 .swiper-pagination",
@@ -43,6 +45,7 @@ const setSwipers = () => {
   }
   if ($("#product-category3").length > 0) {
     const swiper = new Swiper("#product-category3 .swiper", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       pagination: {
         el: "#product-category3 .swiper-pagination",
@@ -61,6 +64,7 @@ const setSwipers = () => {
   }
   if ($("#history-swiper").length > 0) {
     const swiper = new Swiper("#history-swiper", {
+      speed: sliderSpeed,
       slidesPerView: 1,
       effect: "fade",
       pagination: {
@@ -88,6 +92,7 @@ const setSwipers = () => {
     const hisBut = $(".history_pagination_button");
 
     const swiper = new Swiper(".history-swiper--v2", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       spaceBetween: 16,
       navigation: {
@@ -126,7 +131,7 @@ const setSwipers = () => {
     }
 
     swiper.on("slideChangeTransitionEnd", function () {
-      setSlide(this.realIndex);
+      speed: sliderSpeed, setSlide(this.realIndex);
     });
 
     hisBut.each((i, el) => {
@@ -140,12 +145,14 @@ const setSwipers = () => {
 
   if ($(".partners").length > 0) {
     const swiper = new Swiper(".partners .swiper", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
     });
   }
 
   if ($(".ctm-swiper").length > 0) {
     const swiper = new Swiper(".ctm-swiper", {
+      speed: sliderSpeed,
       slidesPerView: 1,
       effect: "fade",
       autoplay: {
@@ -160,6 +167,7 @@ const setSwipers = () => {
 
   if ($(".link-cards__swiper").length > 0) {
     const swiper = new Swiper(".link-cards__swiper", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       spaceBetween: 20,
       pagination: {
@@ -174,6 +182,7 @@ const setSwipers = () => {
   }
   if ($(".team-slider").length > 0) {
     const swiper = new Swiper(".team-slider", {
+      speed: sliderSpeed,
       slidesPerView: 1,
       spaceBetween: 20,
       pagination: {
@@ -188,6 +197,7 @@ const setSwipers = () => {
   }
   if ($(".marketing-promotion").length > 0) {
     const swiper = new Swiper(".marketing-promotion", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       spaceBetween: 16,
       navigation: {
@@ -208,6 +218,7 @@ const setSwipers = () => {
   }
   if ($(".piz-new").length > 0) {
     const swiper = new Swiper(".piz-new .swiper", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       spaceBetween: 16,
       pagination: {
@@ -232,6 +243,7 @@ const setSwipers = () => {
   }
   if ($(".teams-slider").length > 0) {
     const swiper = new Swiper(".teams-slider", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       spaceBetween: 20,
       pagination: {
@@ -269,6 +281,7 @@ const setSwipers = () => {
     $(".news-side").append(controls);
 
     const swiper = new Swiper(".news-side", {
+      speed: sliderSpeed,
       slidesPerView: "auto",
       spaceBetween: 16,
       pagination: {

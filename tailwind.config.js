@@ -32,6 +32,22 @@ module.exports = {
           letterSpacing: "0.01em",
         },
       ],
+      h3desk: [
+        "4.8rem",
+        {
+          fontWeight: "bold",
+          lineHeight: "normal",
+          letterSpacing: "0.02em",
+        },
+      ],
+      h3: [
+        "2.8rem",
+        {
+          fontWeight: "bold",
+          lineHeight: "normal",
+          letterSpacing: "0.02em",
+        },
+      ],
       sub2: [
         "2.8rem",
         {

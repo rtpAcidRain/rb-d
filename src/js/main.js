@@ -141,23 +141,4 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
   });
-
-  function ss(nums) {
-    let i = nums[0];
-    let j = 0;
-    for (let a = 1; a < nums.length; a++) {
-      if (nums[a] > i) {
-        j = i;
-        i = nums[a];
-      } else if (nums[a] > j) {
-        j = nums[a];
-      }
-    }
-
-    return (i - 1) * (j - 1);
-  }
-
-  console.log(ss([3, 4, 5, 2]));
-  // console.log(ss([1, 5, 4, 5]));
-  // console.log(ss([3, 7]));
 });

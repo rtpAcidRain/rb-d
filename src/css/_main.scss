@@ -514,112 +514,12 @@ span {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
-  &__switchers {
-    background-image: linear-gradient(90deg, var(--left) 0%, var(--right) 100%);
-    overflow: hidden;
-    transition: --left 0.2s ease-in, --right 0.2s ease-in;
-    .wrap {
-      @apply border-r border-blue bg-text2;
-      height: 200px;
-      transform: skew(35.184deg);
-
-      & > span {
-        transform: skew(-35.184deg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-      &:last-child {
-        @apply border-none;
-      }
-    }
-
-    &.left {
-      --left: rgba(22, 33, 72, 1);
-    }
-
-    &.right {
-      --right: rgba(22, 33, 72, 1);
-    }
-
-    &.grid-cols-5 {
-      grid-template-columns: 245px 233px 330px 239px 268px !important;
-    }
-  }
-
-  &__switch {
-    @apply border-b border-blue bg-text2 text-white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem 0;
-    gap: 10px;
-    font-size: 1.8rem;
-    line-height: normal;
-    text-transform: uppercase;
-    transition: background-color 0.2s ease-in;
-
-    .icon-arrow2-down {
-      font-size: 3rem;
-    }
-    &--mob {
-      @apply xl:hidden;
-    }
-
-    &:hover {
-      @apply bg-text1;
-    }
-
-    &.current {
-      @apply bg-text1;
-
-      .icon-arrow2-down {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  &__sub {
-    @apply flex flex-col gap-y-[16px] text-body4;
-    li {
-      display: flex;
-      gap: 8px;
-      span:first-child {
-        font-size: 24px;
-      }
-    }
-  }
 
   @screen md {
-    .partner-list__switch {
-      font-size: 2rem;
-      line-height: 1.4em;
-      text-transform: uppercase;
-      padding: 4rem 0;
-      .icon-arrow2-down {
-        font-size: 4rem;
-      }
-    }
-
-    .partner-list__sub {
-      li {
-        span:first-child {
-          font-size: 32px;
-        }
-      }
-    }
   }
 
   @screen xl {
-    .partner-list__sub {
-      @apply text-body3;
-    }
   }
-}
-
-.partner-list__drop-down__item {
-  box-shadow: 0px 20px 40px 0px rgba(96, 110, 163, 0.15);
 }
 
 .partner {
@@ -678,6 +578,7 @@ span {
   height: 362px;
   margin: auto;
   .partner {
+    @apply text-body8 text-text2 md:text-body6 xl:text-body3;
     border-radius: 50%;
     position: absolute;
     z-index: 3;
@@ -700,7 +601,7 @@ span {
     }
 
     &--main {
-      @apply bg-red;
+      @apply bg-red text-white md:text-body4 xl:text-body1;
       width: 109px;
       height: 109px;
       top: 108px;
@@ -983,12 +884,205 @@ span {
   }
 }
 
+.partner--v2-general .partners--v2 {
+  width: 320px;
+  height: 369px;
+
+  .partner {
+    z-index: 4;
+    border: 0;
+    .partner__container {
+      @apply flex flex-col items-center justify-center rounded-full border border-line bg-white;
+      width: 100%;
+      height: 100%;
+
+      span {
+        text-align: center;
+      }
+    }
+    &--main {
+      @apply bg-transparent;
+      width: 119px;
+      height: 119px;
+      top: 134px;
+      left: 100px;
+      z-index: 3;
+
+      .partner__container {
+        @apply flex items-center justify-center rounded-full border-0 bg-red;
+      }
+
+      &::before,
+      &::after {
+        @apply absolute bg-line;
+        content: "";
+        width: 177.53px;
+        height: 1px;
+        top: -13px;
+        left: 3px;
+        z-index: -1;
+        transform-origin: top left;
+        transform: rotate(54deg);
+      }
+
+      &::before {
+        top: -24px;
+        left: auto;
+        right: 2px;
+        z-index: -1;
+        transform-origin: top right;
+        transform: rotate(-54deg);
+      }
+    }
+
+    &--iog {
+      width: 140px;
+      height: 140px;
+
+      svg {
+        width: 80px;
+        height: 71px;
+      }
+    }
+
+    &--mark {
+      width: 127px;
+      height: 127px;
+      top: 15px;
+      right: -4px;
+
+      svg {
+        width: 73px;
+        height: 73px;
+      }
+    }
+
+    &--raa {
+      width: 130px;
+      height: 130px;
+      bottom: 0;
+      left: 11px;
+
+      svg {
+        width: 73px;
+        height: 58px;
+      }
+    }
+
+    &--log {
+      width: 107px;
+      height: 107px;
+      bottom: 17px;
+      right: 0;
+
+      svg {
+        width: 61px;
+        height: 61px;
+      }
+
+      &::after {
+        @apply absolute bg-line;
+        content: "";
+        width: 49px;
+        height: 1px;
+        top: 19px;
+        left: -7px;
+        z-index: -1;
+      }
+    }
+
+    &--anal {
+      width: 121px;
+      height: 121px;
+      svg {
+        width: 68px;
+        height: 68px;
+      }
+    }
+
+    &--fkt {
+      width: 146px;
+      height: 146px;
+      right: 0px;
+      top: -7px;
+
+      svg {
+        width: 87px;
+        height: 75px;
+      }
+    }
+  }
+}
+
+.partner--v2-general#partners-online .partners--v2 {
+  height: 426px;
+
+  .partner {
+    &--main {
+      top: 129px;
+      left: 100px;
+
+      &::before,
+      &::after {
+        @apply absolute bg-line;
+        content: "";
+        width: 191.128px;
+        height: 1px;
+        top: -28px;
+        left: -1px;
+        z-index: -1;
+        transform-origin: top left;
+        transform: rotate(51deg);
+      }
+
+      &::before {
+        width: 249.816px;
+        top: -27px;
+        left: auto;
+        right: -4px;
+        z-index: -1;
+        transform-origin: top right;
+        transform: rotate(-61deg);
+      }
+    }
+
+    &--mark {
+      top: auto;
+      bottom: 74px;
+      right: 0px;
+    }
+
+    &--raa {
+      left: 40px;
+    }
+
+    &--log {
+      bottom: 125px;
+      right: auto;
+      left: 0;
+      z-index: 3;
+
+      &::after {
+        content: "";
+        width: 49px;
+        height: 1px;
+        top: 22px;
+        left: 79px;
+      }
+    }
+  }
+}
+
 @screen md {
   .partners--v2 {
     width: 100%;
     height: 328.269px;
     .partner {
-      .partner--v2-container:not(.partner--v2-container--transition) & {
+      .partner--v2-container:not(.partner--v2-container--transition)
+        &:not(.partner--main),
+      .partner--v2-container:not(.partner--v2-container--transition)
+        &:not(.partner--main)
+        .partner__container {
         cursor: pointer;
         transition-property: border-color, box-shadow;
         transition-timing-function: ease-in;
@@ -997,7 +1091,11 @@ span {
         &:hover {
           border-color: #fff !important;
 
-          box-shadow: 0px 20px 40px 0px rgba(96, 110, 163, 0.15);
+          box-shadow: 0px 20px 40px 0px rgba(96, 110, 163, 0.15) !important;
+
+          .partner__container {
+            border-color: #fff !important;
+          }
         }
       }
       &--main {
@@ -1286,7 +1384,214 @@ span {
       }
     }
   }
+
+  .partner--v2-general .partners--v2 {
+    width: 100%;
+    height: 472px;
+
+    .partner {
+      &--main {
+        width: 175px;
+        height: 175px;
+        top: 151.13px;
+        left: 262.14px;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 276.424px;
+          top: -10.74px;
+          left: 23.64px;
+          transform: rotate(54deg);
+        }
+
+        &::before {
+          width: 353.61px;
+          top: -51.57px;
+          left: auto;
+          right: -80.93px;
+          transform: rotate(-38deg);
+        }
+      }
+
+      &--iog {
+        width: 219px;
+        height: 219px;
+        top: 23.64px;
+
+        svg {
+          width: 126px;
+          height: 111px;
+        }
+
+        &::before {
+          width: 133.94px;
+          top: 116.75px;
+          left: 152.56px;
+        }
+      }
+
+      &--mark {
+        width: 197px;
+        height: 197px;
+        top: 0px;
+        right: 83px;
+
+        svg {
+          width: 114px;
+          height: 114px;
+        }
+      }
+
+      &--raa {
+        width: 170px;
+        height: 170px;
+        bottom: 47.74px;
+        left: 103.14px;
+
+        svg {
+          width: 95px;
+          height: 76px;
+        }
+      }
+
+      &--log {
+        width: 170px;
+        height: 170px;
+        bottom: 25.53px;
+        right: 42.42px;
+
+        svg {
+          width: 97px;
+          height: 97px;
+        }
+
+        &::after {
+          width: 133.94px;
+          height: 1px;
+          top: 87px;
+          left: -29.08px;
+        }
+      }
+    }
+  }
+
+  .partner--v2-general#partners-online .partners--v2 {
+    height: 461px;
+
+    .partner {
+      &--main {
+        top: 141.52px;
+        left: 245.48px;
+
+        &::before,
+        &::after {
+          @apply absolute bg-line;
+          content: "";
+          width: 228.726px;
+          height: 1px;
+          top: -10.54px;
+          left: 16.86px;
+          z-index: -1;
+          transform-origin: top left;
+          transform: rotate(55deg);
+        }
+
+        &::before {
+          width: 317.242px;
+          top: -50.78px;
+          left: auto;
+          right: -17.36px;
+          z-index: -1;
+          transform-origin: top right;
+          transform: rotate(-55deg);
+        }
+      }
+
+      &--anal {
+        width: 176px;
+        height: 176px;
+        top: 44.27px;
+        svg {
+          width: 99px;
+          height: 99px;
+        }
+
+        &::before {
+          width: 125.42px;
+          top: 87px;
+          left: 136.86px;
+          z-index: -1;
+        }
+      }
+
+      &--fkt {
+        width: 184px;
+        height: 184px;
+        right: 121.6px;
+        top: 0px;
+
+        svg {
+          width: 110px;
+          height: 94px;
+        }
+      }
+
+      &--mark {
+        width: 175px;
+        height: 175px;
+        top: 155.61px;
+        right: -12.17px;
+        z-index: 3;
+
+        svg {
+          width: 95px;
+          height: 91px;
+        }
+
+        &::before {
+          width: 203.23px;
+          top: 78.47px;
+          right: 109.6px;
+          z-index: -1;
+        }
+      }
+
+      &--raa {
+        width: 159px;
+        height: 159px;
+        bottom: 7px;
+        left: 369px;
+
+        svg {
+          width: 89px;
+          height: 70px;
+        }
+      }
+
+      &--log {
+        width: 130px;
+        height: 130px;
+        bottom: 50.64px;
+        left: auto;
+        right: 478.18px;
+
+        svg {
+          width: 75px;
+          height: 69px;
+        }
+
+        &::after {
+          width: 125.42px;
+          height: 1px;
+          top: 70.44px;
+          left: 51.02px;
+        }
+      }
+    }
+  }
 }
+
 @screen xl {
   .partners--v2 {
     width: 1159px;
@@ -1570,6 +1875,213 @@ span {
           top: 57px;
           transform: none;
           right: 111px !important;
+        }
+      }
+    }
+  }
+
+  .partner--v2-general .partners--v2 {
+    height: 659px;
+
+    .partner {
+      &--main {
+        width: 245px;
+        height: 245px;
+        top: 211px;
+        left: 487px;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 385.946px;
+          top: -15px;
+          left: 33px;
+          transform: rotate(54deg);
+        }
+
+        &::before {
+          width: 493.697px;
+          top: -72px;
+          left: auto;
+          right: -113px;
+          transform: rotate(-38deg);
+        }
+      }
+
+      &--iog {
+        width: 306px;
+        height: 306px;
+        top: 33px;
+        left: 121px;
+
+        svg {
+          width: 176px;
+          height: 155px;
+        }
+
+        &::before {
+          width: 187px;
+          top: 163px;
+          left: 213px;
+        }
+      }
+
+      &--mark {
+        width: 275px;
+        height: 275px;
+        top: 0px;
+        right: 116px;
+
+        svg {
+          width: 159px;
+          height: 159px;
+        }
+      }
+
+      &--raa {
+        width: 237px;
+        height: 237px;
+        bottom: 67px;
+        left: 265px;
+
+        svg {
+          width: 132px;
+          height: 105px;
+        }
+      }
+
+      &--log {
+        width: 237px;
+        height: 237px;
+        bottom: 36px;
+        right: 184px;
+
+        svg {
+          width: 135px;
+          height: 135px;
+        }
+
+        &::after {
+          width: 187px;
+          height: 1px;
+          top: 122px;
+          left: -39px;
+        }
+      }
+    }
+  }
+
+  .partner--v2-general#partners-online .partners--v2 {
+    height: 659px;
+
+    .partner {
+      &--main {
+        top: 211px;
+        left: 487px;
+
+        &::before,
+        &::after {
+          @apply absolute bg-line;
+          content: "";
+          width: 336.561px;
+          height: 1px;
+          top: -18.87px;
+          left: 33.5px;
+          z-index: -1;
+          transform-origin: top left;
+          transform: rotate(55deg);
+        }
+
+        &::before {
+          width: 470.241px;
+          top: -77.68px;
+          left: auto;
+          right: -56.24px;
+          z-index: -1;
+          transform-origin: top right;
+          transform: rotate(-54deg);
+        }
+      }
+
+      &--anal {
+        width: 261.66px;
+        height: 261.66px;
+        top: 66px;
+        left: 121px;
+        svg {
+          width: 148px;
+          height: 148px;
+        }
+
+        &::before {
+          width: 187px;
+          top: 126.13px;
+          left: 213px;
+          z-index: -1;
+        }
+      }
+
+      &--fkt {
+        width: 275px;
+        height: 275px;
+        right: 216px;
+
+        svg {
+          width: 164px;
+          height: 140px;
+        }
+      }
+
+      &--mark {
+        width: 261.66px;
+        height: 261.66px;
+        top: 232px;
+        right: 40px;
+        z-index: 3;
+
+        svg {
+          width: 142px;
+          height: 136px;
+        }
+
+        &::before {
+          width: 303px;
+          top: 110.12px;
+          right: 163px;
+          z-index: -1;
+        }
+      }
+
+      &--raa {
+        width: 237px;
+        height: 237px;
+        bottom: -13px;
+        left: auto;
+        right: 310px;
+
+        svg {
+          width: 132px;
+          height: 105px;
+        }
+      }
+
+      &--log {
+        width: 194.4px;
+        height: 194.4px;
+        bottom: 49.6px;
+        left: 240px;
+        right: auto;
+
+        svg {
+          width: 111px;
+          height: 103px;
+        }
+
+        &::after {
+          width: 187px;
+          height: 1px;
+          top: 97.62px;
+          left: 86px;
         }
       }
     }
@@ -2192,6 +2704,23 @@ span {
     margin-right: 8px;
   }
 }
+
+.dist-schema__container .dist-schema {
+  width: 360px;
+  height: auto;
+  margin: auto;
+  @screen md {
+    min-width: 599px;
+    height: 327px;
+  }
+
+  @screen xl {
+    position: absolute;
+    left: -22px;
+    max-width: max-content;
+  }
+}
+
 .dist-geography {
   @screen xl {
     clip-path: polygon(0 0%, 66% 0, 100% 100%, 0% 100%);

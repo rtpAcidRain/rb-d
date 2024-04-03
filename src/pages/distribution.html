@@ -36,9 +36,9 @@
   <section>
     <h2 class="container">услуги дистрибьюции</h2>
     <div
-      class="container mb-16 flex grid-cols-12 flex-col gap-x-12 gap-y-8 md:gap-y-[35px] xl:mb-12 xl:grid"
+      class="md:container mb-16 flex grid-cols-12 flex-col gap-x-12 gap-y-8 md:gap-y-[35px] xl:mb-12 xl:grid"
     >
-      <div class="col-span-6">
+      <div class="col-span-6 px-8 md:px-0">
         <div class="line h-[1px] w-[73px] bg-text1"></div>
         <p class="text-body5 xl:text-body3">
           Дистрибьюция — это удобный элемент в системе продаж, помощник
@@ -49,19 +49,14 @@
           <br />
           <br />
           <b
-            >Мы как современный дистрибьютор также предлагаем весь комплекс
-            услуг продвижения товаров на маркетплейсах.</b
+            >Мы, как современный дистрибьютор, также предлагаем весь комплекс услуг по продвижению товаров на маркетплейсах и в сетях, включая современный инструмент для ведения бизнеса <a class="text-red" href="/ru/services/">личный кабинет</a> поставщика.</b
           >
         </p>
       </div>
-      <picture class="col-span-6">
-        <source
-          media="(min-width: 1366px)"
-          srcset="https://rb-d.ru/images/distribution/dist-schema--desk.png"
-        />
+      <picture class="col-span-6 hidden">
         <source
           media="(min-width: 768px)"
-          srcset="https://rb-d.ru/images/distribution/dist-schema--tab.png"
+          srcset="https://rb-d.ru/images/distribution/dist-schema--desk.png"
         />
         <img
           class="dist-schema object-cover"
@@ -69,6 +64,19 @@
           alt=""
         />
       </picture>
+     <div class="col-span-6 relative dist-schema__container ">
+      <picture >
+        <source
+          media="(min-width: 768px)"
+          srcset="https://rb-d.ru/images/distribution/dist-schema--desk.png"
+        />
+        <img
+          class="dist-schema object-cover"
+          src="https://rb-d.ru/images/distribution/dist-schema.png"
+          alt=""
+        />
+      </picture>
+     </div>
     </div>
     <div class="default-grid container">
       <div class="col-span-6 mb-[24px] md:mb-12">

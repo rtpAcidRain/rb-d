@@ -579,6 +579,7 @@ span {
   margin: auto;
   .partner {
     @apply text-body8 text-text2 md:text-body6 xl:text-body3;
+    font-weight: 600;
     border-radius: 50%;
     position: absolute;
     z-index: 3;
@@ -4252,6 +4253,10 @@ span {
 
   &__text {
     @apply text-body5 xl:text-body3;
+
+    p {
+      padding-top: 16px;
+    }
   }
 
   &__more {
@@ -4618,4 +4623,8 @@ span {
 
 .report__image-modal.active .close-img:hover {
   transition: 1s ease;
+}
+
+.whywe > li span *:first-child {
+  font-weight: bold;
 }

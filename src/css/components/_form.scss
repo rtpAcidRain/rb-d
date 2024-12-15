@@ -57,7 +57,7 @@
   .inputs {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 10px;
   }
 
   .button__container {
@@ -97,14 +97,15 @@
   input,
   textarea {
     padding-bottom: 10px;
-
     transition: border-color 0.2s ease-in;
   }
 
+  input {
+    height: 10px;
+  }
+
   &__title {
-    margin-bottom: 4px;
     transition: font-size 0.2s ease-in, color 0.2s ease-in, top 0.2s ease-in;
-    position: absolute;
     top: 30px;
     left: 0;
     cursor: text;
@@ -119,6 +120,11 @@
       font-style: normal;
       font-weight: 400;
       line-height: 1.4em;
+      position: absolute;
+    }
+
+    input {
+      height: auto;
     }
   }
 
@@ -346,6 +352,7 @@ pre {
 }
 
 .input.error {
+  margin-bottom: 30px;
   &.hovered-line-anim {
     &::before {
       @apply bg-errorColor;

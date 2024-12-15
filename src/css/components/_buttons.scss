@@ -357,3 +357,63 @@
     @apply px-[16px] py-[8px] text-body6 text-greyBlue md:text-body4 xl:text-body3;
   }
 }
+
+.button--brand {
+  @apply flex items-center gap-4 border-b text-body4 text-text1 transition-colors xl:text-body3;
+  border-color: transparent;
+
+  span {
+    @apply block flex-1;
+  }
+
+  svg {
+    @apply fill-text1;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    @apply border-text1;
+  }
+
+  &.white {
+    @apply text-white;
+
+    &:hover {
+      @apply border-white;
+    }
+
+    svg {
+      @apply fill-white;
+    }
+  }
+
+  .shop-page & {
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+  }
+
+  @screen md {
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+    .shop-page & {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+    }
+  }
+
+  @screen xl {
+    .shop-page & {
+      bottom: auto;
+      top: 291px;
+      transform: none;
+      left: auto;
+      right: 80px;
+    }
+  }
+}

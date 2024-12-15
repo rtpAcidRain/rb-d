@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-20 md:gap-24 xl:gap-32">
   <section
-    class="default-grid relative md:container md:min-h-[337px] xl:min-h-[423px]"
+    class="default-grid shop-page relative md:container md:min-h-[337px] xl:min-h-[423px]"
   >
     <div
       class="first-title container relative z-10 mb-[24px] pt-12 md:col-span-8 md:mb-12 md:max-w-full md:px-0 xl:mb-0 xl:pt-16"
@@ -45,6 +45,14 @@
         />
       </picture>
     </div>
+    <a href="/" class="button--brand">
+      <span>Перейти на сайт</span>
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M23.3359 14L23.6895 13.6464L24.043 14L23.6895 14.3536L23.3359 14ZM5.83594 14.5C5.5598 14.5 5.33594 14.2761 5.33594 14C5.33594 13.7239 5.5598 13.5 5.83594 13.5V14.5ZM16.6895 6.64645L23.6895 13.6464L22.9824 14.3536L15.9824 7.35355L16.6895 6.64645ZM23.6895 14.3536L16.6895 21.3536L15.9824 20.6464L22.9824 13.6464L23.6895 14.3536ZM23.3359 14.5H5.83594V13.5H23.3359V14.5Z"
+        />
+      </svg>
+    </a>
   </section>
   <section class="bg-lightBlue pt-[24px] md:pt-12 xl:pb-16 xl:pt-16">
     <div class="container">
@@ -67,7 +75,7 @@
         </picture>
       </div>
       <ul
-        class="list col-span-6 col-start-7 mb-[37px] flex flex-col gap-y-8 md:mb-12 xl:mb-0 xl:gap-y-12"
+        class="list whywe col-span-6 col-start-7 mb-[37px] flex flex-col gap-y-8 md:mb-12 xl:mb-0 xl:gap-y-12"
       >
         <li class="list-item--star">
           <span>Высокий уровень экспертизы в продажах и на маркетплейсах</span>
@@ -564,3 +572,17 @@
     </picture>
   </section>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    $(".whywe > li > span").each((_, el) => {
+      var user = $(el);
+      var userStr = user.text() || "";
+      var userParse = userStr.split(" ").map(function (str, index) {
+        if (index > 0) return str;
+        return "<b>" + str + "</b>";
+      });
+      user.html(userParse.join(" "));
+    });
+  });
+</script>

@@ -64,12 +64,20 @@ module.exports = {
           letterSpacing: "0.01em",
         },
       ],
-      body1: ["2.4rem", "1.5em"],
+      body1: [
+        "2.4rem",
+        {
+          lineHeight: "1.5em",
+          fontWeight: "400",
+          letterSpacing: "normal",
+        },
+      ],
       body2: [
         "2rem",
         {
           lineHeight: "1.5em",
           fontWeight: "bold",
+          letterSpacing: "normal",
         },
       ],
       body3: [
@@ -77,6 +85,7 @@ module.exports = {
         {
           lineHeight: "1.5em",
           fontWeight: "normal",
+          letterSpacing: "normal",
         },
       ],
       body4: ["1.8rem", "1.45em"],
@@ -87,12 +96,15 @@ module.exports = {
         {
           lineHeight: "1.45em",
           fontWeight: "bold",
+          letterSpacing: "normal",
         },
       ],
       body8: [
         "1.2rem",
         {
           lineHeight: "1.4em",
+          fontWeight: 400,
+          letterSpacing: "normal",
         },
       ],
       listTitle: ["1.6rem", "1.4em"],
@@ -101,6 +113,7 @@ module.exports = {
         {
           fontWeight: 400,
           lineHeight: "1.4em",
+          letterSpacing: "normal",
         },
       ],
     },

@@ -31,9 +31,13 @@ const setModalsClose = (modal) => {
 
 // Открытие модалок
 
-const openModal = (modal) => {
+const openModal = (modal, text) => {
   $(modal).addClass("flex");
   clearTimeout(timeModal);
+  if (text) {
+    $(modal).find(".form_insert-text").html();
+    $(modal).find(".form_insert-text").html(text);
+  }
   timeModal = setTimeout(() => {
     $(modal).addClass("opened");
   }, 100);

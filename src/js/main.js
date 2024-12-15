@@ -141,4 +141,13 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
   });
+
+  $(".bread-crumbs").each((_, el) => {
+    if ($(el).children(".bread-crumb").length > 3) {
+      $(el).addClass("small-v");
+      $(el)
+        .children(".bread-crumb:nth-child(1)")
+        .after('<li class="bread-crumb"><span>...</span></li>');
+    }
+  });
 });
